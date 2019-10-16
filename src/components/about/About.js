@@ -1,66 +1,59 @@
-import React from 'react'
-import styled from 'styled-components'
-import Link  from '../styles/Link'
-import ContactBar from './ContactBar'
-import BackButton from '../styles/BackButton'
-const AboutStyles = styled.div`
-  display: flex;
-  background: ${props => props.theme.white};
-  color: ${props => props.theme.black};
-`
+import React from 'react';
+import styled from 'styled-components';
+import Link from '../styles/Link';
 
-const courses = {
-  reactAdvanced: {
-    title: 'Wes Bos: Advanced React & GraphQL - Master Package',
-    href: 'https://advancedreact.com/',
-    description: [
-      'React Best Practices',
-      'Server Side Rendering',
-      'GraphQL Schema',
-      'JSON Web Token (JWT)',
-      'Resolvers',
-      'Cache Management',
-      'Loading and Error States',
-      'Logic and Flow with Async + Await',
-      'Authentication and Permissions',
-      'Charging Credit Cards',
-      'Hosting and Transforming Images',
-      'Pagination',
-      'Unit Testing',
-      'Mocking Components',
-      'Deployment',
-    ],
-  },
-  reactBeginners: {
-    title: 'Wes Bos: React for Beginners - Master Package',
-    href: 'https://reactforbeginners.com/',
-    description:
-      'Built and deployed a Single Page Application using React and Firebase.',
-  },
-  js30: {
-    title: 'Wes Bos: Javascript 30',
-    href: 'https://javascript30.com/',
-    description:
-      'Built 30 different projects using vanilla Javascript. Became familiar with a variety of browser APIs including speech recognition, html5 canvas, html5 video player, geolocation and more.',
-  },
-  es6: {
-    title: 'Wes Bos: ES6 for Everyone - Master Package',
-    href: 'https://es6.io/',
-    description:
-      'Strengthened core Javascript skills, became intimately familiar with modern ES6 syntax. Included an overview of ES7+ES8 features.',
-  },
-  flexbox: {
-    title: 'Wes Bos: What the Flexbox',
-    href: 'https://flexbox.io/',
-    description:
-      'A deep dive into css flexbox fundamentals and tricks. Built a mobile app layout using flexbox.',
-  },
-  cssGrid: {
-    title: 'Wes Bos: CSS Grid',
-    href: 'https://cssgrid.io/',
-    description: 'Developed proficiency with CSS Grid fundamentals.',
-  },
-}
+// const courses = {
+//   reactAdvanced: {
+//     title: 'Wes Bos: Advanced React & GraphQL - Master Package',
+//     href: 'https://advancedreact.com/',
+//     description: [
+//       'React Best Practices',
+//       'Server Side Rendering',
+//       'GraphQL Schema',
+//       'JSON Web Token (JWT)',
+//       'Resolvers',
+//       'Cache Management',
+//       'Loading and Error States',
+//       'Logic and Flow with Async + Await',
+//       'Authentication and Permissions',
+//       'Charging Credit Cards',
+//       'Hosting and Transforming Images',
+//       'Pagination',
+//       'Unit Testing',
+//       'Mocking Components',
+//       'Deployment'
+//     ]
+//   },
+//   reactBeginners: {
+//     title: 'Wes Bos: React for Beginners - Master Package',
+//     href: 'https://reactforbeginners.com/',
+//     description:
+//       'Built and deployed a Single Page Application using React and Firebase.'
+//   },
+//   js30: {
+//     title: 'Wes Bos: Javascript 30',
+//     href: 'https://javascript30.com/',
+//     description:
+//       'Built 30 different projects using vanilla Javascript. Became familiar with a variety of browser APIs including speech recognition, html5 canvas, html5 video player, geolocation and more.'
+//   },
+//   es6: {
+//     title: 'Wes Bos: ES6 for Everyone - Master Package',
+//     href: 'https://es6.io/',
+//     description:
+//       'Strengthened core Javascript skills, became intimately familiar with modern ES6 syntax. Included an overview of ES7+ES8 features.'
+//   },
+//   flexbox: {
+//     title: 'Wes Bos: What the Flexbox',
+//     href: 'https://flexbox.io/',
+//     description:
+//       'A deep dive into css flexbox fundamentals and tricks. Built a mobile app layout using flexbox.'
+//   },
+//   cssGrid: {
+//     title: 'Wes Bos: CSS Grid',
+//     href: 'https://cssgrid.io/',
+//     description: 'Developed proficiency with CSS Grid fundamentals.'
+//   }
+// };
 
 // const AboutPageStyles = styled.div`
 //   height: 100%;
@@ -85,18 +78,16 @@ const AboutPageStyles = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   color: ${props => props.theme.black};
   /* Medium Screen */
-  @media only screen and (max-width: ${props=>props.theme.maxWidthMedium}){
-
+  @media only screen and (max-width: ${props => props.theme.maxWidthMedium}) {
     font-size: 32px;
   }
   /* Small Screen */
-  @media only screen and (max-width: ${props=>props.theme.maxWidthSmall}){
+  @media only screen and (max-width: ${props => props.theme.maxWidthSmall}) {
     font-size: 32px;
-
   }
-  a{
-    :focus{
-      span{
+  a {
+    :focus {
+      span {
         color: ${props => props.theme.black};
         -webkit-text-stroke: 0px;
         text-decoration-line: underline;
@@ -104,51 +95,52 @@ const AboutPageStyles = styled.div`
     }
   }
   span {
-    transition:ease 0.3s;
+    transition: ease 0.3s;
     cursor: pointer;
     color: transparent;
     -webkit-text-stroke: 2px ${props => props.theme.black};
-    outline:none;
+    outline: none;
     :hover {
       color: ${props => props.theme.black};
       -webkit-text-stroke: 0px;
       text-decoration-line: underline;
     }
   }
-`
+`;
 const CopyStyles = styled.div`
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  height:90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
   font-size: 56px;
-  text-align:justify;
+  text-align: justify;
   width: 100%;
-  overflow-y:scroll;
-  div.copy{
-    margin-bottom:25px;
+  overflow-y: scroll;
+  div.copy {
+    margin-bottom: 25px;
   }
   ::-webkit-scrollbar {
     width: 0px;
   }
   /* Medium Screen */
-  @media only screen and (max-width: ${props=>props.theme.maxWidthMedium}){
+  @media only screen and (max-width: ${props => props.theme.maxWidthMedium}) {
     font-size: 48px;
   }
   /* Small Screen */
-  @media only screen and (max-width: ${props=>props.theme.maxWidthSmall}){
-    text-align:center;
+  @media only screen and (max-width: ${props => props.theme.maxWidthSmall}) {
+    text-align: center;
     font-size: 42px;
   }
   /* Very Small Screen */
-  @media only screen and (max-width: ${props=>props.theme.maxWidthVerySmall}){
-    text-align:center;
+  @media only screen and (max-width: ${props =>
+      props.theme.maxWidthVerySmall}) {
+    text-align: center;
     font-size: 38px;
   }
   /* Uber Small Screen */
-  @media only screen and (max-width: 280px){
-    text-align:center;
+  @media only screen and (max-width: 280px) {
+    text-align: center;
     font-size: 32px;
   }
 `;
@@ -156,16 +148,21 @@ const CopyStyles = styled.div`
 const About = () => {
   return (
     <AboutPageStyles filled={false}>
-      <CopyStyles className='copy-container'>
-        <div className='copy'>
+      <CopyStyles className="copy-container">
+        <div className="copy">
           My name is Eric Auväärt. I develop{' '}
-      <Link tabIndex={0} to="/web">
-        <span>web experiences</span>
-      </Link>{' '}and love to create{' '}
-      <Link tabIndex={0} to="/video"><span>engaging visuals</span></Link>.</div>
+          <Link tabIndex={0} to="/web">
+            <span>web experiences</span>
+          </Link>{' '}
+          and love to create{' '}
+          <Link tabIndex={0} to="/video">
+            <span>engaging visuals</span>
+          </Link>
+          .
+        </div>
       </CopyStyles>
     </AboutPageStyles>
-  )
+  );
 
   // return (
   //   <AboutPageStyles className="about-page">
@@ -230,6 +227,6 @@ const About = () => {
   //     <div className="work"></div>
   //   </AboutPageStyles>
   // )
-}
+};
 
-export default About
+export default About;

@@ -1,22 +1,21 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import { Provider } from '../context/ListContext'
-import ListContainer from '../ListContainer'
-import ProjectList from './ProjectList'
-import BackButton from '../styles/BackButton'
-import { navigate } from '@reach/router'
-const listItems = Object.values(ProjectList)
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { Provider } from '../context/ListContext';
+import ListContainer from '../ListContainer';
+import ProjectList from './ProjectList';
+import { navigate } from '@reach/router';
+const listItems = Object.values(ProjectList);
 
 const getUniqueTags = listItems => {
-  const accumulator = {}
+  const accumulator = {};
   listItems.map(item => {
-    item.tags.map(tag =>
+    return item.tags.map(tag =>
       accumulator[tag] ? null : (accumulator[tag] = { title: tag })
-    )
-  })
-  return Object.values(accumulator)
-}
-const tags = getUniqueTags(listItems)
+    );
+  });
+  return Object.values(accumulator);
+};
+const tags = getUniqueTags(listItems);
 
 const WebPageStyles = styled.div`
   display: flex;
@@ -25,30 +24,30 @@ const WebPageStyles = styled.div`
   justify-content: flex-start;
   height: 100%;
   width: 100%;
-`
+`;
 
 const Web = () => {
-  const [activeIndex, setActiveIndex] = useState(null)
-  const [activeIndexTag, setActiveIndexTag] = useState(null)
-  const [activeTags, setActiveTags] = useState({})
-  const [activeTagChange, setActiveTagChange] = useState(true)
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndexTag, setActiveIndexTag] = useState(null);
+  const [activeTags, setActiveTags] = useState({});
+  const [activeTagChange, setActiveTagChange] = useState(true);
 
   const handleTagClick = tagIndex => {
-    const clickedTag = tags[tagIndex].title
+    const clickedTag = tags[tagIndex].title;
     if (activeTags[clickedTag]) {
       setActiveTags(activeTags => {
-        delete activeTags[clickedTag]
-        setActiveTagChange(!activeTagChange)
-        return activeTags
-      })
+        delete activeTags[clickedTag];
+        setActiveTagChange(!activeTagChange);
+        return activeTags;
+      });
     } else {
-      setActiveTags({ ...activeTags, [clickedTag]: clickedTag })
-      setActiveTagChange(!activeTagChange)
+      setActiveTags({ ...activeTags, [clickedTag]: clickedTag });
+      setActiveTagChange(!activeTagChange);
     }
-  }
+  };
   const routeToProject = index => {
-    navigate(`/project?title=${listItems[index].title}`)
-  }
+    navigate(`/project?title=${listItems[index].title}`);
+  };
   const states = {
     activeIndex,
     setActiveIndex,
@@ -58,10 +57,10 @@ const Web = () => {
     handleTagClick,
     activeTagChange,
     onClickValue: activeIndex,
-    onClickFunction: routeToProject,
-  }
-  const WebContext = Provider
-  const itemSize = 36
+    onClickFunction: routeToProject
+  };
+  const WebContext = Provider;
+  const itemSize = 36;
   return (
     <WebContext value={states}>
       <WebPageStyles className="web-page-container">
@@ -83,7 +82,7 @@ const Web = () => {
         />
       </WebPageStyles>
     </WebContext>
-  )
-}
+  );
+};
 
-export default Web
+export default Web;

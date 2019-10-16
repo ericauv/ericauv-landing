@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import ProjectList from "./ProjectList"
-import BackButton from "../styles/BackButton"
-import ListTitle from "../ListTitle"
+import React from 'react';
+import styled from 'styled-components';
+import ProjectList from './ProjectList';
+import BackButton from '../styles/BackButton';
+import ListTitle from '../ListTitle';
 const ProjectStyles = styled.div`
   height: 100%;
   background: ${props => props.theme.white};
@@ -13,15 +13,14 @@ const ProjectStyles = styled.div`
   }
   p,
   li {
-    font-family: "Georgia";
+    font-family: 'Georgia';
   }
-`
+`;
 
-const ProjectTitleStyles = styled.h1``
 const Project = ({ title }) => {
-  const project = ProjectList[title]
+  const project = ProjectList[title];
 
-  if (!project) return null
+  if (!project) return null;
   const {
     tags,
     summary,
@@ -30,8 +29,8 @@ const Project = ({ title }) => {
     lessons,
     challenges,
     nextSteps,
-    images,
-  } = project
+    images
+  } = project;
 
   return (
     <ProjectStyles className="project">
@@ -116,7 +115,7 @@ const Project = ({ title }) => {
         </>
       )}
     </ProjectStyles>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;

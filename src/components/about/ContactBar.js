@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
-import { github } from '../Icons'
-import { instagram } from '../Icons'
-import { linkedin } from '../Icons'
-import { email } from '../Icons'
-import { pdf } from '../Icons'
+import React from 'react';
+import styled from 'styled-components';
+import { github } from '../Icons';
+import { instagram } from '../Icons';
+import { linkedin } from '../Icons';
+import { email } from '../Icons';
+import { pdf } from '../Icons';
 const ContactBarStyles = styled.div`
   position:absolute;
   bottom:5px;
@@ -43,18 +43,53 @@ const ContactBarStyles = styled.div`
       /* stroke: ${props => props.theme.black}; */
     }
   }
-`
+`;
 
 const ContactBar = () => {
   return (
     <ContactBarStyles>
-      <a title='linked in' target="_blank" href="https://linkedin.com/in/eric-auvaart/">{linkedin}</a>
-      <a title='github' target="_blank" href="https://github.com/ericauv">{github}</a>
-      <a title='email' target="_blank" href='mailto:e.auvaart@gmail.com'>{email}</a>
-      <a title='instagram' target="_blank" href="https://www.instagram.com/ericauv/">{instagram}</a>
-      <a title='resume' target="_blank" href="https://www.instagram.com/ericauv/">{pdf} +CV</a>
+      <a
+        title="linked in"
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://linkedin.com/in/eric-auvaart/"
+      >
+        {linkedin}
+      </a>
+      <a
+        title="github"
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://github.com/ericauv"
+      >
+        {github}
+      </a>
+      <a
+        title="email"
+        rel="noopener noreferrer"
+        target="_blank"
+        href="mailto:e.auvaart@gmail.com"
+      >
+        {email}
+      </a>
+      <a
+        title="instagram"
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://www.instagram.com/ericauv/"
+      >
+        {instagram}
+      </a>
+      <a
+        title="resume"
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://www.instagram.com/ericauv/"
+      >
+        {pdf} +CV
+      </a>
     </ContactBarStyles>
-  )
-}
+  );
+};
 
-export default ContactBar
+export default ContactBar;
