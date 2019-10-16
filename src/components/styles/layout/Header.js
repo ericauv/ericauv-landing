@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import Link from '../Link'
-import styled from 'styled-components'
+import React, { useState } from 'react';
+import Link from '../Link';
+import styled from 'styled-components';
 const HeaderStyles = styled.h1`
   cursor: pointer;
   z-index: 3;
@@ -16,7 +16,7 @@ const HeaderStyles = styled.h1`
   text-decoration: none;
   /* text stroke */
   ${props =>
-    props.filled ? '' : `-webkit-text-stroke: 2px ${props.theme.black};`}
+    props.filled ? '' : `-webkit-text-stroke: 1.8px ${props.theme.black};`}
   font-family: Arial, Helvetica, sans-serif;
   color: ${props => (props.filled ? props.theme.black : 'transparent')};
   text-align: center;
@@ -28,10 +28,10 @@ const HeaderStyles = styled.h1`
     font-size: 54px;
     line-height: 54px;
   }
-`
+`;
 
 const Header = ({ filled = false, children }) => {
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(false);
   return (
     <Link to="/">
       <HeaderStyles
@@ -43,7 +43,7 @@ const Header = ({ filled = false, children }) => {
         ericauv
       </HeaderStyles>
     </Link>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

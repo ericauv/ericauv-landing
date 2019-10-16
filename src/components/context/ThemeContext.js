@@ -18,12 +18,14 @@ const themes = {
     name: 'default',
     black: '#000000',
     white: '#FFFFFF',
+    textStroke: '1.4px #000000',
     ...baseTheme
   },
   dark: {
     name: 'dark',
     white: '#000000',
     black: '#FFFFFF',
+    textStroke: '1px #FFFFFF',
     ...baseTheme
   }
 };

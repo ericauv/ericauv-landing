@@ -26,7 +26,7 @@ const ListItemStyles = styled.li`
      1px 1px 0 #000;
 } */
 
-    -webkit-text-stroke:1.4px ${props => props.theme.black};
+    -webkit-text-stroke: ${props => props.theme.textStroke};
   }
   svg {
     width: ${props => props.size}px;

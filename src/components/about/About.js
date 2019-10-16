@@ -98,7 +98,7 @@ const AboutPageStyles = styled.div`
     transition: ease 0.3s;
     cursor: pointer;
     color: transparent;
-    -webkit-text-stroke: 2px ${props => props.theme.black};
+    -webkit-text-stroke: ${props => props.theme.textStroke};
     outline: none;
     :hover {
       color: ${props => props.theme.black};
