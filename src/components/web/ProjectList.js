@@ -1,17 +1,27 @@
+import React from 'react';
 const ProjectsList = {
-  'student-profiles': {
-    tags: ['react.js'],
-    title: 'student-profiles',
-    summary:
-      'The goal of this project was to successfully implement a design handed off to me by another designer. The aim was to reproduce the visual and functional features of the mockup as accurately as possible',
-    constraints: ['complete task within 24 hours of mockup receipt'],
-    lessons: ['Learnt to use React.Context']
-  },
   'ericauv-store': {
     tags: ['node.js', 'react.js', 'graphql', 'apollo', 'next.js', 'deployment'],
     title: 'ericauv-store',
-    summary:
-      'A web store that allows users to purchase photo prints. Sends order confirmation emails through integration with Mailgun. Processes credit card payments via Stripe API integration.',
+    summary: (
+      <>
+        <p>
+          A web store that allows users to purchase photo prints. Sends order
+          confirmation emails through integration with Mailgun. Processes credit
+          card payments via Stripe API integration.
+        </p>
+        <ul>
+          <li>Learnt how to make Queries + Mutations using graphql'</li>
+          <li>'Learnt how to set up a graphql datamodel'</li>
+          <li>
+            'Saw the beauty of how graphQL is self-documenting through its
+            datamodel and schema
+          </li>
+        </ul>
+      </>
+    ),
+    githubLink: 'https://github.com/ericauv/ericauv-new',
+    projectLink: 'https://store.ericauv.com',
     challenges: ['deployment', 'cookies'],
     lessons: [
       'Learnt how to make Queries + Mutations using graphql',
@@ -42,6 +52,14 @@ const ProjectsList = {
         'https://media.istockphoto.com/vectors/flat-design-vector-concept-of-stairs-with-light-bulb-magnifier-gear-vector-id901963952?k=6&m=901963952&s=612x612&w=0&h=gqRyWDesc0eoHMDfWJWDZJPT2FqsIYpvmBG1wh3OrWk='
     }
   },
+  'student-profiles': {
+    tags: ['react.js'],
+    title: 'student-profiles',
+    summary:
+      'The goal of this project was to successfully implement a design handed off to me by another designer. The aim was to reproduce the visual and functional features of the mockup as accurately as possible',
+    constraints: ['complete task within 24 hours of mockup receipt'],
+    lessons: ['Learnt to use React.Context']
+  },
   'dimension-image': {
     tags: ['react.js'],
     title: 'dimension-image',
@@ -56,7 +74,7 @@ const ProjectsList = {
   },
   ericauv: {
     title: 'ericauv',
-    tags: ['react.js', 'next.js', 'deployment']
+    tags: ['react.js', 'gatsby.js', 'deployment']
   },
   'bullet-app': {
     title: 'bullet-app',

@@ -46,7 +46,7 @@ const Web = () => {
     }
   };
   const routeToProject = index => {
-    navigate(`/project?title=${listItems[index].title}`);
+    navigate(`/project`);
   };
   const states = {
     activeIndex,
@@ -61,6 +61,7 @@ const Web = () => {
   };
   const WebContext = Provider;
   const itemSize = 36;
+
   return (
     <WebContext value={states}>
       <WebPageStyles className="web-page-container">

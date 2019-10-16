@@ -1,0 +1,80 @@
+{
+  "ericauv-store": {
+    "tags": [
+      "node.js",
+      "react.js",
+      "graphql",
+      "apollo",
+      "next.js",
+      "deployment"
+    ],
+    "title": "ericauv-store",
+    "summary": "A web store that allows users to purchase photo prints. Sends order confirmation emails through integration with Mailgun. Processes credit card payments via Stripe API integration.",
+    "challenges": ["deployment", "cookies"],
+    "lessons": [
+      "Learnt how to make Queries + Mutations using graphql",
+      "Learnt how to set up a graphql datamodel",
+      "Saw the beauty of how graphQL is self-documenting through its datamodel and schema"
+    ],
+    "nextSteps": [
+      "determine how to implement lcoal storage to store JWT token while app is SSR",
+      "accesibility: dark-mode, fidelity slider",
+      "skeleton site for items pages",
+      "Allow cart access without requiring sign up",
+      "password reset flow",
+      "Improve Cart UX: update quantity of cart item, esc key to close cart, click outside cart to close cart",
+      "add site map to footer"
+    ],
+    "images": {
+      "title": "https://c1.sfdcstatic.com/content/dam/blogs/ca/Blog%20Posts/start-ecomerce-store-og.png",
+      "summary": "https://www.logolynx.com/images/logolynx/e3/e3368a59705284ba6862f1ae3f580fb7.png",
+      "challenges": "http://agrytech.org/wp-content/uploads/2017/02/challenges-ahead-900-x-500-900x407.png"
+    }
+  },
+  "student-profiles": {
+    "tags": ["react.js"],
+    "title": "student-profiles",
+    "summary": "The goal of this project was to successfully implement a design handed off to me by another designer. The aim was to reproduce the visual and functional features of the mockup as accurately as possible",
+    "constraints": ["complete task within 24 hours of mockup receipt"],
+    "lessons": ["Learnt to use React.Context"]
+  },
+  "dimension-image": {
+    "tags": ["react.js"],
+    "title": "dimension-image",
+    "summary": "Allow user to add and position dimension annotations on an image.",
+    "background": "saw an image with a dimension div that appeared on hover on Pinterest. I wanted to implement more in depth functionality and allow anyone to add dimensions to their images easily.",
+    "lessons": [
+      "normalization of dimension line properties",
+      "saving image with dimension info"
+    ]
+  },
+  "ericauv": {
+    "title": "ericauv",
+    "tags": ["react.js", "gatsby.js", "deployment"]
+  },
+  "bullet-app": { "title": "bullet-app", "tags": ["react.js", "firebase"] },
+  "yt-2-spotify": {
+    "title": "yt-2-spotify",
+    "tags": ["node.js", "graphql", "RESTful", "apollo"],
+    "summary": "A weekend hackathon at home done in collaboration with a friend. Convert a youtube playlist to a spotify playlist. User enters the url of a youtube playlist, and a spotify playlist containing the same songs is created.",
+    "constraints": [
+      "Brainstorm project ideas, design and build in one weekend."
+    ],
+    "challenges": [
+      "A lot of cleanup was required on the youtube titles. I used Regex to remove a lot of noise from youtube video titles so that the title could be used in spotify as a search term"
+    ],
+    "lessons": [
+      "Became familiar with React hooks (useState, useRef, useEffect)",
+      "Used Apollo DataSource methodology to organize our spotify and youtube api calls + data cleanup/reduction",
+      "Learnt the benefit of drawing out a swimlane analysis diagram to visualize dataflow between frontend <-> graphQL server <-> external APIs"
+    ]
+  },
+  "rest-api": {
+    "title": "rest-api",
+    "tags": ["node.js", "RESTful"],
+    "summary": "to fill",
+    "constraints": ["to fill"],
+    "challenges": ["to fill"],
+    "lessons": ["to fill"]
+  }
+}
