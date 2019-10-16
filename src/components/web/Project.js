@@ -111,6 +111,7 @@ const Project = ({ title }) => {
 
   return (
     <ProjectStyles
+      autoFocus
       tabIndex={0}
       onScroll={handleScroll}
       ref={projectRef}
