@@ -1,36 +1,35 @@
-import React, { useState, useRef } from "react"
-import styled from "styled-components"
-import { Provider } from "../context/ListContext"
-import LandingHeader from "../LandingHeader"
-import ListTitle from "../ListTitle"
-import ListContainer from "../ListContainer"
-import VideoPlayer from "./VideoPlayer"
-import BackButton from "../styles/BackButton"
+import React, { useState, useRef } from 'react'
+import styled from 'styled-components'
+import { Provider } from '../context/ListContext'
+import ListTitle from '../ListTitle'
+import ListContainer from '../ListContainer'
+import VideoPlayer from './VideoPlayer'
+import BackButton from '../styles/BackButton'
 
-const videoPath = "../../static/video/"
+const videoPath = '../../static/video/'
 
 const listItems = [
-  { title: "violet", video: "violet/violet-vid.mp4" },
+  { title: 'violet', video: 'violet/violet-vid.mp4' },
   {
-    title: "seoul-fashion-week-민주",
-    video: "seoul-fashion-week/minju-vid.mp4",
+    title: 'seoul-fashion-week-민주',
+    video: 'seoul-fashion-week/minju-vid.mp4',
   },
   {
-    title: "seoul-fashion-week-하늘",
-    video: "seoul-fashion-week/haneul-vid.mp4",
+    title: 'seoul-fashion-week-하늘',
+    video: 'seoul-fashion-week/haneul-vid.mp4',
   },
-  { title: "sam-gellaitry", video: "sam-gellaitry/sam-gellaitry-vid.mp4" },
-  { title: "magic", video: "magic/magic-vid.mp4" },
-  { title: "comme-unité-hat", video: "comme-unite/hat-vid.mp4" },
-  { title: "comme-unité-launch", video: "comme-unite/launch-vid.mp4" },
-  { title: "bahia-dreamin", video: "bahia-dreamin/bahia-dreamin-vid.mp4" },
-  { title: "nils-frahm", video: "nils-frahm/nils-frahm-vid.mp4" },
-  { title: "goodbye", video: "goodbye/goodbye-vid.mp4" },
+  { title: 'sam-gellaitry', video: 'sam-gellaitry/sam-gellaitry-vid.mp4' },
+  { title: 'magic', video: 'magic/magic-vid.mp4' },
+  { title: 'comme-unité-hat', video: 'comme-unite/hat-vid.mp4' },
+  { title: 'comme-unité-launch', video: 'comme-unite/launch-vid.mp4' },
+  { title: 'bahia-dreamin', video: 'bahia-dreamin/bahia-dreamin-vid.mp4' },
+  { title: 'nils-frahm', video: 'nils-frahm/nils-frahm-vid.mp4' },
+  { title: 'goodbye', video: 'goodbye/goodbye-vid.mp4' },
   {
-    title: "str8-outta-mumbai",
-    video: "str8-outta-mumbai/str8-outta-mumbai-vid.mp4",
+    title: 'str8-outta-mumbai',
+    video: 'str8-outta-mumbai/str8-outta-mumbai-vid.mp4',
   },
-  { title: "good-guy", video: "good-guy/good-guy-vid.mp4" },
+  { title: 'good-guy', video: 'good-guy/good-guy-vid.mp4' },
 ]
 
 const VideoPageStyles = styled.div`
@@ -71,16 +70,13 @@ const Video = () => {
         tabIndex={0}
         onKeyPress={e => {
           // Allow spacebar for controlling play/pause
-          if (e.key === " " || e.key === "Spacebar") {
+          if (e.key === ' ' || e.key === 'Spacebar') {
             e.preventDefault()
             togglePlaying(playing)
           }
         }}
       >
-        <LandingHeader filled={false}>ericauv</LandingHeader>
-        <BackButton style={{ marginTop: "20px", alignSelf: "flex-start" }}>
-          {"<- Back"}
-        </BackButton>
+        {/* <BackButton /> */}
 
         <ListTitle title="video" size={itemSize}></ListTitle>
         {activeItem && activeItem.video && (
@@ -95,13 +91,13 @@ const Video = () => {
         {!activeItem && !activeItem.video && (
           <div
             style={{
-              display: "flex",
-              width: "100%",
-              height: "240px",
-              fontFamily: "Arial, Helvetica, sans-serif",
-              justifySelf: "center",
-              flexDirection: "column",
-              justifyItems: "center",
+              display: 'flex',
+              width: '100%',
+              height: '240px',
+              fontFamily: 'Arial, Helvetica, sans-serif',
+              justifySelf: 'center',
+              flexDirection: 'column',
+              justifyItems: 'center',
             }}
           >
             <p>Selected works</p>
@@ -111,7 +107,7 @@ const Video = () => {
           </div>
         )}
         <ListContainer
-          title={"work"}
+          title={'work'}
           list={listItems}
           itemSize={itemSize}
           itemSpacing={5}

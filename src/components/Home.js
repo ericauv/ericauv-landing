@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Provider } from './context/ListContext'
-import LandingHeader from './LandingHeader'
 import ListContainer from './ListContainer'
 import icons from './Icons'
 import { navigate } from 'gatsby'
@@ -47,7 +46,6 @@ const Home = () => {
   return (
     <HomeContext value={states}>
       <HomePageStyles>
-        <LandingHeader filled={true}>ericauv</LandingHeader>
         <div
           style={{
             height: '60%',

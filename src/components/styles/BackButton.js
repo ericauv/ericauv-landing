@@ -5,8 +5,8 @@ export default props => (
     title="Go back"
     className="back"
     onClick={() => window.history.back()}
-    style={props.style}
+    style={props.style ? {...props.style} : { alignSelf:'flex-start'}}
   >
-    {props.children}
+    {'< Back'}
   </Button>
 )

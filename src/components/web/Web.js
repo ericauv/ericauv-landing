@@ -1,11 +1,10 @@
-import React, { useState } from "react"
-import styled from "styled-components"
-import { Provider } from "../context/ListContext"
-import LandingHeader from "../LandingHeader"
-import ListContainer from "../ListContainer"
-import ProjectList from "./ProjectList"
-import BackButton from "../styles/BackButton"
-import { navigate } from "@reach/router"
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import { Provider } from '../context/ListContext'
+import ListContainer from '../ListContainer'
+import ProjectList from './ProjectList'
+import BackButton from '../styles/BackButton'
+import { navigate } from '@reach/router'
 const listItems = Object.values(ProjectList)
 
 const getUniqueTags = listItems => {
@@ -66,10 +65,7 @@ const Web = () => {
   return (
     <WebContext value={states}>
       <WebPageStyles className="web-page-container">
-        <LandingHeader filled={false}>ericauv</LandingHeader>
-        <BackButton style={{ marginTop: "20px", alignSelf: "flex-start" }}>
-          {"<- Back"}
-        </BackButton>
+        {/* <BackButton /> */}
         <ListContainer
           type="tag"
           key="tags-list"
