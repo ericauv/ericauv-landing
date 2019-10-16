@@ -156,7 +156,6 @@ const CopyStyles = styled.div`
 const About = () => {
   return (
     <AboutPageStyles filled={false}>
-      {/* <BackButton/> */}
       <CopyStyles className='copy-container'>
         <div className='copy'>
           My name is Eric Auväärt. I develop{' '}

@@ -76,9 +76,7 @@ const Video = () => {
           }
         }}
       >
-        {/* <BackButton /> */}
-
-        <ListTitle title="video" size={itemSize}></ListTitle>
+        {/* <ListTitle title="video" size={itemSize}>video</ListTitle> */}
         {activeItem && activeItem.video && (
           <VideoPlayer
             name="video-player"

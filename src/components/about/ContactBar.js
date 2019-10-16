@@ -4,9 +4,10 @@ import { github } from '../Icons'
 import { instagram } from '../Icons'
 import { linkedin } from '../Icons'
 import { email } from '../Icons'
+import { pdf } from '../Icons'
 const ContactBarStyles = styled.div`
   position:absolute;
-  bottom:0px;
+  bottom:5px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -26,16 +27,16 @@ const ContactBarStyles = styled.div`
       transform: scale(1.1);
     }
 
-    width: 64px;
-    height: 64px;
+    width: 46px;
+    height: 46px;
     @media only screen and (max-width:${props => props.theme.maxWidthMedium}){
-      width:48px;
-      height:48px;
+      width:30px;
+      height:30px;
     }
-    @media only screen and (max-width:${props => props.theme.maxWidthSmall}){
+    /* @media only screen and (max-width:${props => props.theme.maxWidthSmall}){
       width:32px;
       height:32px;
-    }
+    } */
     >path {
       fill: ${props => props.theme.black};
       stroke-width: 7;
@@ -47,10 +48,11 @@ const ContactBarStyles = styled.div`
 const ContactBar = () => {
   return (
     <ContactBarStyles>
-      <a target="_blank" href="https://linkedin.com/in/eric-auvaart/">{linkedin}</a>
-      <a target="_blank" href="https://github.com/ericauv">{github}</a>
-      <a target="_blank" href='mailto:e.auvaart@gmail.com'>{email}</a>
-      <a target="_blank" href="https://www.instagram.com/ericauv/">{instagram}</a>
+      <a title='linked in' target="_blank" href="https://linkedin.com/in/eric-auvaart/">{linkedin}</a>
+      <a title='github' target="_blank" href="https://github.com/ericauv">{github}</a>
+      <a title='email' target="_blank" href='mailto:e.auvaart@gmail.com'>{email}</a>
+      <a title='instagram' target="_blank" href="https://www.instagram.com/ericauv/">{instagram}</a>
+      <a title='resume' target="_blank" href="https://www.instagram.com/ericauv/">{pdf} +CV</a>
     </ContactBarStyles>
   )
 }

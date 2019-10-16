@@ -65,7 +65,6 @@ const Web = () => {
   return (
     <WebContext value={states}>
       <WebPageStyles className="web-page-container">
-        {/* <BackButton /> */}
         <ListContainer
           type="tag"
           key="tags-list"
