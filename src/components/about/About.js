@@ -84,16 +84,6 @@ const AboutPageStyles = styled.div`
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   color: ${props => props.theme.black};
-  /* word-wrap:break-word;
-  word-break:break-all;
-  hyphens:auto; */
-  &> * {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto;}
   /* Medium Screen */
   @media only screen and (max-width: ${props=>props.theme.maxWidthMedium}){
 
@@ -104,10 +94,21 @@ const AboutPageStyles = styled.div`
     font-size: 32px;
 
   }
+  a{
+    :focus{
+      span{
+        color: ${props => props.theme.black};
+        -webkit-text-stroke: 0px;
+        text-decoration-line: underline;
+      }
+    }
+  }
   span {
+    transition:ease 0.3s;
     cursor: pointer;
     color: transparent;
     -webkit-text-stroke: 2px ${props => props.theme.black};
+    outline:none;
     :hover {
       color: ${props => props.theme.black};
       -webkit-text-stroke: 0px;
@@ -159,10 +160,10 @@ const About = () => {
       <CopyStyles className='copy-container'>
         <div className='copy'>
           My name is Eric Auväärt. I develop{' '}
-      <Link to="/web">
+      <Link tabIndex={0} to="/web">
         <span>web experiences</span>
       </Link>{' '}and love to create{' '}
-      <Link to="/video"><span>engaging visuals</span></Link>.</div>
+      <Link tabIndex={0} to="/video"><span>engaging visuals</span></Link>.</div>
       </CopyStyles>
     </AboutPageStyles>
   )

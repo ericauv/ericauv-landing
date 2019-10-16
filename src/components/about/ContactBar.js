@@ -14,11 +14,18 @@ const ContactBarStyles = styled.div`
   a {
     cursor: pointer;
     margin-right: 20px;
+    &:focus{
+      svg{
+        transform:scale(1.1);
+      }
+    }
   }
   * > svg {
+    transition:ease 0.3s;
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
+
     width: 64px;
     height: 64px;
     @media only screen and (max-width:${props => props.theme.maxWidthMedium}){
