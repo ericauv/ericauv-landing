@@ -6,6 +6,7 @@ const ListItem = ({ index, title = '', icon, tags = [], size = 24 }) => {
   const {
     activeIndex,
     setActiveIndex,
+    activeTagChange,
     activeTags,
     onClickValue,
     onClickFunction
@@ -18,7 +19,7 @@ const ListItem = ({ index, title = '', icon, tags = [], size = 24 }) => {
     } else {
       setVisible(true);
     }
-  }, [activeTags, tags, setVisible]);
+  }, [activeTags, tags, setVisible, activeTagChange]);
   return (
     visible && (
       <ListItemStyles
