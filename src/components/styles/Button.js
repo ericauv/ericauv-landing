@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export default styled.button.attrs(props => ({
   size: props.size || 1,
-  scale: props.scale || 1,
+  scale: props.scale || 1
 }))`
   border-radius: 5px;
   background: ${props => props.theme.black};
