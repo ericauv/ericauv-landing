@@ -93,7 +93,7 @@ const ProjectSectionContent = styled.div`
 `;
 
 const Project = ({ title }) => {
-  const project = ProjectList[tite];
+  const project = ProjectList[title];
   const projectRef = useRef();
   useEffect(() => {
     projectRef.current.focus();
