@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { github } from '../Icons';
 import { view } from '../Icons';
 const ContactBarStyles = styled.div`
+  box-shadow: ${props => props.theme.bsUp};
   transition: transform 0.5s ease;
   transform: translateY(
     ${props => (props.translate ? props.translate + 5 : 0)}px

@@ -3,9 +3,9 @@ import React, { createContext, useState } from 'react';
 const baseTheme = {
   red: '#FF0000',
   grey: '#696969',
-  lightgrey: '#E1E1E1',
   offWhite: '#F5F5F5',
-  bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)',
+  bs: '0 3px 6px 0 rgba(0, 0, 0, 0.2)',
+  bsUp: '1px -1px 3px rgba(0, 0, 0, 0.4)',
   maxWidthVeryLarge: '1800px',
   maxWidthLarge: '1000px',
   maxWidthMedium: '700px',
@@ -18,6 +18,7 @@ const themes = {
     name: 'default',
     black: '#000000',
     white: '#FFFFFF',
+    lightGrey: '#C1C1C1',
     textStroke: '1.4px #000000',
     ...baseTheme
   },
@@ -25,6 +26,7 @@ const themes = {
     name: 'dark',
     white: '#000000',
     black: '#FFFFFF',
+    lightGrey: '#696969',
     textStroke: '1px #FFFFFF',
     ...baseTheme
   }
