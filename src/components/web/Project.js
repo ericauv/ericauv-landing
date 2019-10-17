@@ -42,6 +42,13 @@ const ProjectStyles = styled.div`
     margin-bottom: 10px;
     border: 1px solid ${props => props.theme.black};
   }
+  video{
+    border-radius:15px;
+    height:400px;
+    width:100%;
+    margin-bottom: 10px;
+    border: 1px solid ${props => props.theme.black};
+  }
 
   p,
   li {
@@ -92,8 +99,7 @@ const ProjectSectionContent = styled.div`
   font-family: 'Georgia';
 `;
 
-const Project = ({ title }) => {
-  const project = ProjectList[title];
+const Project = ({ prpject }) => {
   const projectRef = useRef();
   useEffect(() => {
     projectRef.current.focus();
@@ -107,7 +113,7 @@ const Project = ({ title }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [shouldTranslateBar, setShouldTranslateBar] = useState(false);
   if (!project) return null;
-  const { tags, sections, githubLink, projectLink, images } = project;
+  const { tags, sections, githubLink, projectLink, images, titleMedia } = project;
 
   const handleScroll = () => {
     const currentScrollY = projectRef.current.scrollTop;
@@ -129,7 +135,10 @@ const Project = ({ title }) => {
       className="project"
     >
       <h2>{title}</h2>
-      {images && images.title && <img src={images.title} alt={title}></img>}
+      {titleMedia && titleMedia.type==='img' ? <img src={titleMedia.src} alt={title}></img> : <video autoPlay loop title={title}>
+        <source src={titleMedia.src} type="video/mp4"/>
+        Your browser does not support the video tag.
+      </video>}
       {tags && tags.length && (
         <TagSection className="tag-section">
           {tags.map((tag, index) => (
@@ -162,11 +171,14 @@ const Project = ({ title }) => {
             </ProjectSectionContent>
           </ProjectSection>
         ))}
+      {(projectLink || githubLink) &&
+
       <ProjectBar
-        shouldTranslateBar={shouldTranslateBar}
-        githubLink={githubLink}
-        projectLink={projectLink}
+      shouldTranslateBar={shouldTranslateBar}
+      githubLink={githubLink}
+      projectLink={projectLink}
       />
+    }
     </ProjectStyles>
   );
 };
