@@ -3,7 +3,8 @@ import Project from '../components/web/Project';
 import Layout from '../components/styles/layout/Layout';
 const ProjectPage = props => (
   <Layout>
-    <Project title="ericauv" />
+    hey
+    {/* <Project title="yt-to-spotify" /> */}
   </Layout>
 );
 export default ProjectPage;

@@ -1,5 +1,9 @@
+import { ThemeContextProvider } from '../context/ThemeContext';
+import Layout from '../styles/layout/Layout';
 import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
+import {graphql} from 'gatsby'
+import { useStaticQuery } from "gatsby"
 import ProjectList from './ProjectList';
 import ProjectBar from './ProjectBar';
 const ProjectStyles = styled.div`
@@ -55,6 +59,7 @@ const ProjectStyles = styled.div`
     line-height: 2rem;
     font-family: 'Georgia';
   }
+  font-size:100px;
 `;
 
 const TagSection = styled.div`
@@ -82,8 +87,8 @@ const Tag = styled.div`
   padding-left: 8px;
   padding-right: 8px;
 `;
-const ProjectSection = styled.div``;
-const ProjectSectionTitle = styled.h3`
+export const ProjectSection = styled.div``;
+export const ProjectSectionTitle = styled.h3`
   font-weight: 900;
   -webkit-text-stroke: ${props => props.theme.textStroke};
   color: transparent;
@@ -91,7 +96,7 @@ const ProjectSectionTitle = styled.h3`
   margin-top: 10px;
   margin-bottom: 0;
 `;
-const ProjectSectionContent = styled.div`
+export const ProjectSectionContent = styled.div`
   p {
     margin-top: 10px;
   }
@@ -99,88 +104,31 @@ const ProjectSectionContent = styled.div`
   font-family: 'Georgia';
 `;
 
-const Project = ({ prpject }) => {
-  const projectRef = useRef();
-  useEffect(() => {
-    projectRef.current.focus();
-    projectRef.current.addEventListener('scroll', () => {});
-    const currentRef = projectRef.current;
-    // returned function will be called on component unmount
-    return () => {
-      currentRef.removeEventListener('scroll', () => {});
-    };
-  }, []);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [shouldTranslateBar, setShouldTranslateBar] = useState(false);
-  if (!project) return null;
-  const { tags, sections, githubLink, projectLink, images, titleMedia } = project;
 
-  const handleScroll = () => {
-    const currentScrollY = projectRef.current.scrollTop;
-    projectRef.current.focus();
-    if (currentScrollY > lastScrollY) {
-      setShouldTranslateBar(true);
-    } else {
-      setShouldTranslateBar(false);
-    }
-    setLastScrollY(currentScrollY);
-  };
-
+const Project = (props) => {
+  const data = useStaticQuery(
+    graphql`
+    query htmlGet {
+      markdownRemark(id: {eq: "b011abce-a79b-581b-9590-cc8acd92c239"}) {
+        id
+        html
+      }
+    }`
+  );
+  console.log(data)
   return (
-    <ProjectStyles
-      autoFocus
-      tabIndex={0}
-      onScroll={handleScroll}
-      ref={projectRef}
-      className="project"
-    >
-      <h2>{title}</h2>
-      {titleMedia && titleMedia.type==='img' ? <img src={titleMedia.src} alt={title}></img> : <video autoPlay loop title={title}>
-        <source src={titleMedia.src} type="video/mp4"/>
-        Your browser does not support the video tag.
-      </video>}
-      {tags && tags.length && (
-        <TagSection className="tag-section">
-          {tags.map((tag, index) => (
-            <Tag
-              className={`tag ${index === 0 ? 'tag-first' : ''}`}
-              key={`${title}-tag-${index}`}
-            >
-              {tag}
-            </Tag>
-          ))}
-        </TagSection>
-      )}
-      {sections &&
-        sections.map((section, index) => (
-          <ProjectSection
-            className="project-section"
-            key={`project-section-${index}`}
-          >
-            <ProjectSectionTitle
-              className="project-section-title"
-              key={`section-${index}-title`}
-            >
-              {section.title}
-            </ProjectSectionTitle>
-            <ProjectSectionContent
-              className="project-section-content"
-              key={`section-${index}-content`}
-            >
-              {section.content}
-            </ProjectSectionContent>
-          </ProjectSection>
-        ))}
-      {(projectLink || githubLink) &&
+    <ThemeContextProvider>
+  <Layout>
 
-      <ProjectBar
-      shouldTranslateBar={shouldTranslateBar}
-      githubLink={githubLink}
-      projectLink={projectLink}
-      />
-    }
+    <ProjectStyles
+    autoFocus
+    tabIndex={0}
+    className="project"
+    >
+      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
     </ProjectStyles>
+    </Layout>
+    </ThemeContextProvider>
   );
 };
-
 export default Project;
