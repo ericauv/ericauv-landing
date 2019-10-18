@@ -1,9 +1,7 @@
-import { ThemeContextProvider } from '../context/ThemeContext';
-import Layout from '../styles/layout/Layout';
 import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
-import {graphql} from 'gatsby'
-import { useStaticQuery } from "gatsby"
+import { graphql } from 'gatsby';
+import { useStaticQuery } from 'gatsby';
 import ProjectList from './ProjectList';
 import ProjectBar from './ProjectBar';
 const ProjectStyles = styled.div`
@@ -41,25 +39,36 @@ const ProjectStyles = styled.div`
     text-decoration: underline;
     margin-bottom: 10px;
   }
+  h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    -webkit-text-stroke: ${props => props.theme.textStroke};
+    color: transparent;
+    font-size: 28px;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
   img {
     width: 100%;
     margin-bottom: 10px;
     border: 1px solid ${props => props.theme.black};
   }
-  video{
-    border-radius:15px;
-    height:400px;
-    width:100%;
+  video {
+    border-radius: 15px;
+    height: 400px;
+    width: 100%;
     margin-bottom: 10px;
     border: 1px solid ${props => props.theme.black};
   }
 
-  p,
-  li {
+  div.project-content {
+    p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
     line-height: 2rem;
     font-family: 'Georgia';
   }
-  font-size:100px;
 `;
 
 const TagSection = styled.div`
@@ -87,48 +96,99 @@ const Tag = styled.div`
   padding-left: 8px;
   padding-right: 8px;
 `;
-export const ProjectSection = styled.div``;
-export const ProjectSectionTitle = styled.h3`
-  font-weight: 900;
-  -webkit-text-stroke: ${props => props.theme.textStroke};
-  color: transparent;
-  font-size: 28px;
-  margin-top: 10px;
-  margin-bottom: 0;
-`;
-export const ProjectSectionContent = styled.div`
-  p {
-    margin-top: 10px;
-  }
-  line-height: 2rem;
-  font-family: 'Georgia';
-`;
 
-
-const Project = (props) => {
+const Project = props => {
   const data = useStaticQuery(
     graphql`
-    query htmlGet {
-      markdownRemark(id: {eq: "b011abce-a79b-581b-9590-cc8acd92c239"}) {
-        id
-        html
+      query htmlGet {
+        markdownRemark(id: { eq: "b011abce-a79b-581b-9590-cc8acd92c239" }) {
+          id
+          html
+          frontmatter {
+            title
+            tags
+            titleMediaType
+            titleMedia {
+              publicURL
+            }
+            githubLink
+            projectLink
+          }
+        }
       }
-    }`
+    `
   );
-  console.log(data)
+  const projectRef = useRef();
+  useEffect(() => {
+    projectRef.current.focus();
+    projectRef.current.addEventListener('scroll', () => {});
+    const currentRef = projectRef.current;
+    // returned function will be called on component unmount
+    return () => {
+      currentRef.removeEventListener('scroll', () => {});
+    };
+  }, []);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [shouldTranslateBar, setShouldTranslateBar] = useState(false);
+  const {
+    title,
+    tags,
+    githubLink,
+    projectLink,
+    titleMediaType,
+    titleMedia
+  } = data.markdownRemark.frontmatter;
+  const handleScroll = () => {
+    const currentScrollY = projectRef.current.scrollTop;
+    projectRef.current.focus();
+    if (currentScrollY > lastScrollY) {
+      setShouldTranslateBar(true);
+    } else {
+      setShouldTranslateBar(false);
+    }
+    setLastScrollY(currentScrollY);
+  };
   return (
-    <ThemeContextProvider>
-  <Layout>
-
     <ProjectStyles
-    autoFocus
-    tabIndex={0}
-    className="project"
+      autoFocus
+      tabIndex={0}
+      onScroll={handleScroll}
+      ref={projectRef}
+      className="project"
     >
-      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
+      <h2>{title}</h2>
+      {titleMedia && titleMediaType === 'img' ? (
+        <img src={titleMedia.publicURL} alt={title}></img>
+      ) : (
+        <video autoPlay loop title={title}>
+          <source src={titleMedia.publicURL} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
+      {tags && tags.length && (
+        <TagSection className="tag-section">
+          {tags.map((tag, index) => (
+            <Tag
+              className={`tag ${index === 0 ? 'tag-first' : ''}`}
+              key={`${title}-tag-${index}`}
+            >
+              {tag}
+            </Tag>
+          ))}
+        </TagSection>
+      )}
+      <div
+        className="project-content"
+        dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+      ></div>
+      {(projectLink || githubLink) && (
+        <ProjectBar
+          shouldTranslateBar={shouldTranslateBar}
+          githubLink={githubLink}
+          projectLink={projectLink}
+        />
+      )}
     </ProjectStyles>
-    </Layout>
-    </ThemeContextProvider>
   );
 };
 export default Project;
