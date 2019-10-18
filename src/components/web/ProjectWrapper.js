@@ -2,10 +2,12 @@ import React from 'react';
 import Layout from '../styles/layout/Layout';
 import Project from './Project';
 import { graphql } from 'gatsby';
+import SEO from '../seo'
 
 const ProjectWrapper = ({ data: { markdownRemark } }) => {
   return (
     <Layout>
+      <SEO title={markdownRemark.frontmatter.title}/>
       <Project data={markdownRemark}></Project>
     </Layout>
   );
