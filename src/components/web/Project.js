@@ -1,8 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { graphql } from 'gatsby';
-import { useStaticQuery } from 'gatsby';
-import ProjectList from './ProjectList';
 import ProjectBar from './ProjectBar';
 const ProjectStyles = styled.div`
   outline: none;
@@ -97,27 +94,7 @@ const Tag = styled.div`
   padding-right: 8px;
 `;
 
-const Project = props => {
-  const data = useStaticQuery(
-    graphql`
-      query htmlGet {
-        markdownRemark(id: { eq: "b011abce-a79b-581b-9590-cc8acd92c239" }) {
-          id
-          html
-          frontmatter {
-            title
-            tags
-            titleMediaType
-            titleMedia {
-              publicURL
-            }
-            githubLink
-            projectLink
-          }
-        }
-      }
-    `
-  );
+const Project = ({ data }) => {
   const projectRef = useRef();
   useEffect(() => {
     projectRef.current.focus();
@@ -137,7 +114,7 @@ const Project = props => {
     projectLink,
     titleMediaType,
     titleMedia
-  } = data.markdownRemark.frontmatter;
+  } = data.frontmatter;
   const handleScroll = () => {
     const currentScrollY = projectRef.current.scrollTop;
     projectRef.current.focus();
@@ -179,7 +156,7 @@ const Project = props => {
       )}
       <div
         className="project-content"
-        dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+        dangerouslySetInnerHTML={{ __html: data.html }}
       ></div>
       {(projectLink || githubLink) && (
         <ProjectBar

@@ -2,20 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Provider } from '../context/ListContext';
 import ListContainer from '../ListContainer';
-import ProjectList from './ProjectList';
 import { navigate } from '@reach/router';
-const listItems = Object.values(ProjectList);
-
-const getUniqueTags = listItems => {
-  const accumulator = {};
-  listItems.map(item => {
-    return item.tags.map(tag =>
-      accumulator[tag] ? null : (accumulator[tag] = { title: tag })
-    );
-  });
-  return Object.values(accumulator);
-};
-const tags = getUniqueTags(listItems);
 
 const WebPageStyles = styled.div`
   display: flex;
@@ -26,11 +13,22 @@ const WebPageStyles = styled.div`
   width: 100%;
 `;
 
-const Web = () => {
+const Web = ({ projects }) => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [activeIndexTag, setActiveIndexTag] = useState(null);
   const [activeTags, setActiveTags] = useState({});
   const [activeTagChange, setActiveTagChange] = useState(true);
+
+  const getUniqueTags = projects => {
+    const accumulator = {};
+    projects.map(project => {
+      return project.tags.map(tag =>
+        accumulator[tag] ? null : (accumulator[tag] = { title: tag })
+      );
+    });
+    return Object.values(accumulator);
+  };
+  const tags = getUniqueTags(projects);
 
   const handleTagClick = tagIndex => {
     const clickedTag = tags[tagIndex].title;
@@ -46,7 +44,7 @@ const Web = () => {
     }
   };
   const routeToProject = index => {
-    navigate(`/project`);
+    navigate(`${projects[index].slug}`);
   };
   const states = {
     activeIndex,
@@ -77,7 +75,7 @@ const Web = () => {
         <ListContainer
           key="work-list"
           title="work"
-          list={listItems}
+          list={projects}
           itemSize={itemSize}
           itemSpacing={5}
         />

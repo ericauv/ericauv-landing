@@ -1,5 +1,4 @@
 import React from 'react';
-import ericauvImage from '../../images/ericauv.png';
 import ericauvStoreVideo from '../../images/ericauv-store.mp4';
 import ytSwimlane from '../../images/yt-2-spotify-swimlane.jpg';
 const ProjectList = {
