@@ -1,6 +1,6 @@
 ---
 title: dimension-image
-tags: [react.js],
+tags: [react.js]
 githubLink: https://github.com/ericauv/dimension-image
 titleMediaType: video
 titleMedia: ../images/ericauv-store.mp4

@@ -5,7 +5,6 @@ githubLink: https://github.com/ericauv/rest-api
 titleMediaType: video
 titleMedia: ../images/ericauv-store.mp4
 ---
-
 <div class="project-section">
   <h3 class="project-section-title">summary</h3>
   <div class="project-section-content">

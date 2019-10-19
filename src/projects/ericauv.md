@@ -99,6 +99,9 @@ titleMedia: ../images/ericauv-store.mp4
         fulfill all the achievements. I would likely implement this by storing
         achievement progress (ex: 3/14 achievements completed) in localStorage.
       </li>
+      <li>
+        <strong>Persist dark mode.</strong> Ideally, when a user navigates between store.ericauv.com and ericauv.com or revisits one of those sites after closing their browser, they're dark mode preference should stay the same. I would implement this by saving the dark mode/light mode selection in local storage, and setting the dark/light theme by looking at the value of this item in localStorage.
+      </li>
     </ul>
   </div>
 </div>
