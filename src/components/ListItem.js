@@ -1,7 +1,7 @@
 import React, { useRef, useContext, useEffect, useState } from 'react';
 import ListContext from './context/ListContext';
 import ListItemStyles from './styles/ListItemStyles';
-const ListItem = ({ index, title = '', icon, tags = [], size = 24 }) => {
+const ListItem = ({ index, title = '', altTitle='', icon, tags = [], size = 24 }) => {
   const listItemRef = useRef(null);
   const {
     activeIndex,
@@ -23,7 +23,8 @@ const ListItem = ({ index, title = '', icon, tags = [], size = 24 }) => {
   return (
     visible && (
       <ListItemStyles
-        title={title}
+        aria-label={altTitle || title}
+        title={altTitle || title}
         className={`list-item ${visible ? '' : 'list-item-not-visible'} ${
           activeIndex === index ? 'list-item-active' : ''
         }`}

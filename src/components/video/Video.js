@@ -3,33 +3,43 @@ import styled from 'styled-components';
 import { Provider } from '../context/ListContext';
 import ListContainer from '../ListContainer';
 import VideoPlayer from './VideoPlayer';
-
-const videoPath = '../../static/video/';
+import violetPath from '../../images/violet-vid.mp4'
+import minjuPath from '../../images/minju-vid.mp4'
+import haneulPath from '../../images/haneul-vid.mp4'
+import samGPath from '../../images/sam-gellaitry-vid.mp4'
+import magicPath from '../../images/magic-vid.mp4'
+import commeHatPath from '../../images/hat-vid.mp4'
+import commeLaunchPath from '../../images/launch-vid.mp4'
+import bahiaPath from '../../images/bahia-dreamin-vid.mp4'
+import nilsPath from '../../images/nils-frahm-vid.mp4'
+import goodbyePath from '../../images/goodbye-vid.mp4'
+import mumbaiPath from '../../images/str8-outta-mumbai-vid.mp4'
+import goodGuyPath from '../../images/good-guy-vid.mp4'
+const videoPath = '../../images/';
 
 const listItems = [
-  { title: 'violet', video: 'violet/violet-vid.mp4' },
+  { title: 'violet', video: violetPath, altTitle:'Click or Press Space/Enter to play/pause' },
   {
     title: 'seoul-fashion-week-민주',
-    video: 'seoul-fashion-week/minju-vid.mp4'
+    video: minjuPath, altTitle:'Click or Press Space/Enter to play/pause'
   },
   {
     title: 'seoul-fashion-week-하늘',
-    video: 'seoul-fashion-week/haneul-vid.mp4'
+    video: haneulPath, altTitle:'Click or Press Space/Enter to play/pause'
   },
-  { title: 'sam-gellaitry', video: 'sam-gellaitry/sam-gellaitry-vid.mp4' },
-  { title: 'magic', video: 'magic/magic-vid.mp4' },
-  { title: 'comme-unité-hat', video: 'comme-unite/hat-vid.mp4' },
-  { title: 'comme-unité-launch', video: 'comme-unite/launch-vid.mp4' },
-  { title: 'bahia-dreamin', video: 'bahia-dreamin/bahia-dreamin-vid.mp4' },
-  { title: 'nils-frahm', video: 'nils-frahm/nils-frahm-vid.mp4' },
-  { title: 'goodbye', video: 'goodbye/goodbye-vid.mp4' },
+  { title: 'sam-gellaitry', video: samGPath, altTitle:'Click or Press Space/Enter to play/pause' },
+  { title: 'magic', video: magicPath, altTitle:'Click or Press Space/Enter to play/pause' },
+  { title: 'comme-unité-hat', video: commeHatPath, altTitle:'Click or Press Space/Enter to play/pause' },
+  { title: 'comme-unité-launch', video: commeLaunchPath, altTitle:'Click or Press Space/Enter to play/pause'  },
+  { title: 'bahia-dreamin', video: bahiaPath, altTitle:'Click or Press Space/Enter to play/pause' },
+  { title: 'nils-frahm', video: nilsPath, altTitle:'Click or Press Space/Enter to play/pause' },
+  { title: 'goodbye', video: goodbyePath, altTitle:'Click or Press Space/Enter to play/pause' },
   {
     title: 'str8-outta-mumbai',
-    video: 'str8-outta-mumbai/str8-outta-mumbai-vid.mp4'
+    video: mumbaiPath, altTitle:'Click or Press Space/Enter to play/pause'
   },
-  { title: 'good-guy', video: 'good-guy/good-guy-vid.mp4' }
+  { title: 'good-guy', video: goodGuyPath, altTitle:'Click or Press Space/Enter to play/pause'}
 ];
-
 const VideoPageStyles = styled.div`
   height: 100%;
   width: 100%;
@@ -81,7 +91,7 @@ const Video = () => {
             key={activeItem.video}
             setPlaying={setPlaying}
             vidRef={vidRef}
-            src={`${videoPath}${activeItem.video}`}
+            src={`${activeItem.video}`}
           ></VideoPlayer>
         )}
         {!activeItem && !activeItem.video && (

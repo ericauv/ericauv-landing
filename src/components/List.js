@@ -66,6 +66,7 @@ const List = ({ list, itemSize, itemSpacing, type, flexGrow }) => {
           <ListItem
             index={index}
             key={listItem.title}
+            altTitle={listItem.altTitle}
             title={listItem.title}
             icon={listItem.icon}
             tags={listItem.tags}
