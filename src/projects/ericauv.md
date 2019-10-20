@@ -1,9 +1,7 @@
 ---
 title: ericauv
 githubLink: https://github.com/ericauv/ericauv-landing
-tags: [react.js, gatsby.js, graphql, deployment, node.js]
-titleMediaType: video
-titleMedia: ../images/ericauv-store.mp4
+tags: [graphQL, react.js, gatsby.js, node.js]
 ---
 
 <div class="project-section">

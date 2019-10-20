@@ -3,42 +3,80 @@ import styled from 'styled-components';
 import { Provider } from '../context/ListContext';
 import ListContainer from '../ListContainer';
 import VideoPlayer from './VideoPlayer';
-import violetPath from '../../images/violet-vid.mp4'
-import minjuPath from '../../images/minju-vid.mp4'
-import haneulPath from '../../images/haneul-vid.mp4'
-import samGPath from '../../images/sam-gellaitry-vid.mp4'
-import magicPath from '../../images/magic-vid.mp4'
-import commeHatPath from '../../images/hat-vid.mp4'
-import commeLaunchPath from '../../images/launch-vid.mp4'
-import bahiaPath from '../../images/bahia-dreamin-vid.mp4'
-import nilsPath from '../../images/nils-frahm-vid.mp4'
-import goodbyePath from '../../images/goodbye-vid.mp4'
-import mumbaiPath from '../../images/str8-outta-mumbai-vid.mp4'
-import goodGuyPath from '../../images/good-guy-vid.mp4'
-const videoPath = '../../images/';
+import violetPath from '../../images/violet-vid.mp4';
+import minjuPath from '../../images/minju-vid.mp4';
+import haneulPath from '../../images/haneul-vid.mp4';
+import samGPath from '../../images/sam-gellaitry-vid.mp4';
+import magicPath from '../../images/magic-vid.mp4';
+import commeHatPath from '../../images/hat-vid.mp4';
+import commeLaunchPath from '../../images/launch-vid.mp4';
+import bahiaPath from '../../images/bahia-dreamin-vid.mp4';
+import nilsPath from '../../images/nils-frahm-vid.mp4';
+import goodbyePath from '../../images/goodbye-vid.mp4';
+import mumbaiPath from '../../images/str8-outta-mumbai-vid.mp4';
+import goodGuyPath from '../../images/good-guy-vid.mp4';
 
 const listItems = [
-  { title: 'violet', video: violetPath, altTitle:'Click or Press Space/Enter to play/pause' },
+  {
+    title: 'violet',
+    video: violetPath,
+    altTitle: 'Click or Press Space/Enter to play/pause'
+  },
   {
     title: 'seoul-fashion-week-민주',
-    video: minjuPath, altTitle:'Click or Press Space/Enter to play/pause'
+    video: minjuPath,
+    altTitle: 'Click or Press Space/Enter to play/pause'
   },
   {
     title: 'seoul-fashion-week-하늘',
-    video: haneulPath, altTitle:'Click or Press Space/Enter to play/pause'
+    video: haneulPath,
+    altTitle: 'Click or Press Space/Enter to play/pause'
   },
-  { title: 'sam-gellaitry', video: samGPath, altTitle:'Click or Press Space/Enter to play/pause' },
-  { title: 'magic', video: magicPath, altTitle:'Click or Press Space/Enter to play/pause' },
-  { title: 'comme-unité-hat', video: commeHatPath, altTitle:'Click or Press Space/Enter to play/pause' },
-  { title: 'comme-unité-launch', video: commeLaunchPath, altTitle:'Click or Press Space/Enter to play/pause'  },
-  { title: 'bahia-dreamin', video: bahiaPath, altTitle:'Click or Press Space/Enter to play/pause' },
-  { title: 'nils-frahm', video: nilsPath, altTitle:'Click or Press Space/Enter to play/pause' },
-  { title: 'goodbye', video: goodbyePath, altTitle:'Click or Press Space/Enter to play/pause' },
+  {
+    title: 'sam-gellaitry',
+    video: samGPath,
+    altTitle: 'Click or Press Space/Enter to play/pause'
+  },
+  {
+    title: 'magic',
+    video: magicPath,
+    altTitle: 'Click or Press Space/Enter to play/pause'
+  },
+  {
+    title: 'comme-unité-hat',
+    video: commeHatPath,
+    altTitle: 'Click or Press Space/Enter to play/pause'
+  },
+  {
+    title: 'comme-unité-launch',
+    video: commeLaunchPath,
+    altTitle: 'Click or Press Space/Enter to play/pause'
+  },
+  {
+    title: 'bahia-dreamin',
+    video: bahiaPath,
+    altTitle: 'Click or Press Space/Enter to play/pause'
+  },
+  {
+    title: 'nils-frahm',
+    video: nilsPath,
+    altTitle: 'Click or Press Space/Enter to play/pause'
+  },
+  {
+    title: 'goodbye',
+    video: goodbyePath,
+    altTitle: 'Click or Press Space/Enter to play/pause'
+  },
   {
     title: 'str8-outta-mumbai',
-    video: mumbaiPath, altTitle:'Click or Press Space/Enter to play/pause'
+    video: mumbaiPath,
+    altTitle: 'Click or Press Space/Enter to play/pause'
   },
-  { title: 'good-guy', video: goodGuyPath, altTitle:'Click or Press Space/Enter to play/pause'}
+  {
+    title: 'good-guy',
+    video: goodGuyPath,
+    altTitle: 'Click or Press Space/Enter to play/pause'
+  }
 ];
 const VideoPageStyles = styled.div`
   height: 100%;

@@ -1,9 +1,7 @@
 ---
 title: yt-to-spotify
-tags: [node.js, graphql, RESTful, apollo]
+tags: [node.js, graphQL, RESTful, apollo]
 githubLink: https://github.com/ericauv/yt2Spotify
-titleMediaType: video
-titleMedia: ../images/ericauv-store.mp4
 ---
 
 <div class="project-section">

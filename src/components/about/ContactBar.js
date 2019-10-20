@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import resumePdf from '../../images/Auvaart-Eric_Web-Developer_Resume.pdf';
 import { github } from '../Icons';
 import { instagram } from '../Icons';
 import { linkedin } from '../Icons';
@@ -80,13 +81,8 @@ const ContactBar = () => {
       >
         {instagram}
       </a>
-      <a
-        title="resume"
-        rel="noopener noreferrer"
-        target="_blank"
-        href="https://www.instagram.com/ericauv/"
-      >
-        {pdf} +CV
+      <a title="resume" href={resumePdf}>
+        {pdf}
       </a>
     </ContactBarStyles>
   );

@@ -51,11 +51,12 @@ const ProjectStyles = styled.div`
     border: 1px solid ${props => props.theme.black};
   }
   video {
-    border-radius: 15px;
-    height: 400px;
+    /* border-radius: 15px; */
+    max-height: 400px;
     width: 100%;
     margin-bottom: 10px;
-    border: 1px solid ${props => props.theme.black};
+    border-top: 4px solid ${props => props.theme.black};
+    border-bottom: 4px solid ${props => props.theme.black};
   }
 
   div.project-content {
@@ -134,14 +135,15 @@ const Project = ({ data }) => {
       className="project"
     >
       <h2>{title}</h2>
-      {titleMedia && titleMediaType === 'img' ? (
-        <img src={titleMedia.publicURL} alt={title}></img>
-      ) : (
-        <video autoPlay loop title={title}>
-          <source src={titleMedia.publicURL} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      )}
+      {titleMedia &&
+        (titleMediaType === 'img' ? (
+          <img src={titleMedia && titleMedia.publicURL} alt={title}></img>
+        ) : (
+          <video autoPlay loop title={title}>
+            <source src={titleMedia && titleMedia.publicURL} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ))}
       {tags && tags.length && (
         <TagSection className="tag-section">
           {tags.map((tag, index) => (

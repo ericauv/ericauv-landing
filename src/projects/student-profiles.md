@@ -1,9 +1,9 @@
 ---
 title: student-profiles
-tags: [react.js]
+tags: [react.js, RESTful]
 githubLink: https://github.com/ericauv/student-profiles
 titleMediaType: video
-titleMedia: ../images/ericauv-store.mp4
+titleMedia: ../images/student-profiles.mp4
 ---
 
 <div class="project-section">
