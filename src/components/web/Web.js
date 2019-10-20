@@ -69,7 +69,7 @@ const Web = ({ projects }) => {
           title="web"
           list={tags}
           itemSize={itemSize}
-          itemSpacing={5}
+          itemSpacing={10}
           flexGrow={0.8}
         />
         <ListContainer
@@ -77,7 +77,7 @@ const Web = ({ projects }) => {
           title="work"
           list={projects}
           itemSize={itemSize}
-          itemSpacing={5}
+          itemSpacing={10}
         />
       </WebPageStyles>
     </WebContext>

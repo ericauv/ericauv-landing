@@ -154,7 +154,7 @@ const Video = () => {
           title={'work'}
           list={listItems}
           itemSize={itemSize}
-          itemSpacing={5}
+          itemSpacing={10}
         />
       </VideoPageStyles>
     </VideoContext>
