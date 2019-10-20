@@ -61,17 +61,6 @@ tags: [graphQL, react.js, gatsby.js, node.js]
   </div>
 </div>
 <div class="project-section">
-  <h3 class="project-section-title">achievements/lessons</h3>
-  <div class="project-section-content">
-    <p>
-      Some text
-    </p>
-    <ul>
-      <li><strong>an achievement hook</strong> an achievement</li>
-    </ul>
-  </div>
-</div>
-<div class="project-section">
   <h3 class="project-section-title">next steps</h3>
   <div class="project-section-content">
     <p>
