@@ -8,11 +8,12 @@ const ListStyles = styled.ul`
   ::-webkit-scrollbar {
     width: 0px;
   }
+  margin-bottom:7px;
   display: flex;
   flex-direction: column;
   flex-grow: ${props => props.flexGrow};
   flex-shrink: ${props => (props.flexGrow ? 1 / props.flexGrow : 1)};
-  flex: 1 1 ${props => props.itemSpacing * 4 + props.itemSize * 4}px;
+  flex-basis:${props => props.itemSpacing * 4 + props.itemSize * 4}px;
   @media only screen and (max-width: ${props => props.theme.maxWidthMedium}) {
     flex-basis: ${props =>
       Math.ceil(0.9 * (props.itemSpacing * 4 + props.itemSize * 4))}px;
