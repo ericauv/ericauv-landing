@@ -16,11 +16,11 @@ export default styled.button.attrs(props => ({
   padding-left: 1rem;
   padding-right: 1rem;
   height: ${props => props.size + 1}rem;
-  line-height: ${props => props.size || 1}rem;
+  line-height: ${props => props.size + 1}rem;
   @media only screen and (max-width: ${props => props.theme.maxWidthSmall}) {
     font-size: ${props => props.size * 0.7}rem;
     height: ${props => props.size * 1.3}rem;
-    line-height: ${props => props.size - 1 || 1}rem;
+    line-height: ${props => props.size * 1.3}rem;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
     &.no-shrink {
@@ -28,7 +28,7 @@ export default styled.button.attrs(props => ({
       padding-left: 1rem;
       padding-right: 1rem;
       height: ${props => props.size + 1}rem;
-      line-height: ${props => props.size}rem;
+      line-height: ${props => props.size + 1}rem;
     }
   }
   transform: rotate(0deg);

@@ -39,7 +39,7 @@ const ListItemStyles = styled.li`
   }
   &.list-item-active {
     padding-left: 5px;
-    border-left: 5px solid ${props => props.theme.black};
+    /* border-left: 5px so  lid ${props => props.theme.black}; */
 
     h2 {
       /* text-shadow:none; */

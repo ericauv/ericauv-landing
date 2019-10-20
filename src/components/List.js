@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import ListItem from './ListItem'
-import ListItemTag from './ListItemTag'
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import ListItem from './ListItem';
+import ListItemTag from './ListItemTag';
 
 const ListStyles = styled.ul`
   ::-webkit-scrollbar {
@@ -27,20 +27,30 @@ const ListStyles = styled.ul`
   overflow-y: scroll;
   li {
     padding: 0;
-    padding-top: ${props => Math.floor(props.itemSpacing / 2)}px;
-    padding-bottom: ${props => Math.ceil(props.itemSpacing / 2)}px;
+    /* padding-top: ${props => Math.floor(props.itemSpacing / 2)}px; */
+    /* padding-bottom: ${props => Math.ceil(props.itemSpacing / 2)}px; */
+    margin-top: ${props => Math.floor(props.itemSpacing / 2)}px;
+    margin-bottom: ${props => Math.ceil(props.itemSpacing / 2)}px;
     /* Medium Screen */
     @media only screen and (max-width: ${props => props.theme.maxWidthMedium}) {
-      padding-top: ${props => Math.floor((0.9 * props.itemSpacing) / 2)}px;
-      padding-bottom: ${props => Math.ceil((0.9 * props.itemSpacing) / 2)}px;
+      /* padding-top: ${props =>
+        Math.floor((0.9 * props.itemSpacing) / 2)}px; */
+      /* padding-bottom: ${props =>
+        Math.ceil((0.9 * props.itemSpacing) / 2)}px; */
+      margin-top: ${props => Math.floor((0.9 * props.itemSpacing) / 2)}px;
+      margin-bottom: ${props => Math.ceil((0.9 * props.itemSpacing) / 2)}px;
     }
     /* Small Screen */
     @media only screen and (max-width: ${props => props.theme.maxWidthSmall}) {
-      padding-top: ${props => Math.floor((0.75 * props.itemSpacing) / 2)}px;
-      padding-bottom: ${props => Math.ceil((0.75 * props.itemSpacing) / 2)}px;
+      /* padding-top: ${props =>
+        Math.floor((0.75 * props.itemSpacing) / 2)}px; */
+      /* padding-bottom: ${props =>
+        Math.ceil((0.75 * props.itemSpacing) / 2)}px; */
+      maring-top: ${props => Math.floor((0.75 * props.itemSpacing) / 2)}px;
+      maring-bottom: ${props => Math.ceil((0.75 * props.itemSpacing) / 2)}px;
     }
   }
-`
+`;
 
 const List = ({ list, itemSize, itemSpacing, type, flexGrow }) => {
   return (
@@ -74,13 +84,13 @@ const List = ({ list, itemSize, itemSpacing, type, flexGrow }) => {
           />
         ))}
     </ListStyles>
-  )
-}
+  );
+};
 
 List.propTypes = {
   list: PropTypes.array,
   itemSize: PropTypes.number,
   itemSpacing: PropTypes.number,
-  flexGrow: PropTypes.number,
-}
-export default List
+  flexGrow: PropTypes.number
+};
+export default List;

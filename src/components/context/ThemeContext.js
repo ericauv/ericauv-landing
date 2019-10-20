@@ -19,7 +19,7 @@ const themes = {
     black: '#000000',
     white: '#FFFFFF',
     lightGrey: '#C1C1C1',
-    textStroke: '1.4px #000000',
+    textStroke: '1.2px #000000',
     ...baseTheme
   },
   dark: {
