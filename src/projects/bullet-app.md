@@ -1,12 +1,12 @@
 ---
 title: bullet-app
-tags: [react.js, firebase, deployment]
+tags: [react.js]
 githubLink: https://github.com/ericauv/bullet-app
 titleMediaType: video
-titleMedia: ../images/ericauv-store.mp4
+titleMedia: ../images/bullet-app.mp4
 ---
 
-<p><strong>NOTE:</strong> This was one of my first projects -- it is here for reference to show my learning progress, not as a showcase of my current skillset</p>
+<p><strong>NOTE: This was one of my first projects -- it is here for reference to show my learning progress, not as a showcase of my current skillset</strong></p>
 <div class="project-section">
   <h3 class="project-section-title">summary</h3>
   <div class="project-section-content">

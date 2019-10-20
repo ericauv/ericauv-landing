@@ -1,6 +1,6 @@
 ---
 title: ericauv-store
-tags: [node.js, react.js, graphql, apollo, next.js, deployment]
+tags: [node.js, react.js, graphQL, apollo, next.js, RESTful]
 titleMediaType: video
 titleMedia: '../images/ericauv-store.mp4'
 githubLink: https://github.com/ericauv/ericauv-new
