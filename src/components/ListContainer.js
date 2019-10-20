@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import ListTitle from './ListTitle'
-import List from './List'
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import ListTitle from './ListTitle';
+import List from './List';
 const ListContainerStyles = styled.div`
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@ const ListContainerStyles = styled.div`
   flex-shrink: ${props => (props.flexGrow ? 1 / props.flexGrow : 1)};
   flex-basis: auto;
   width: 100%;
-`
+`;
 
 const ListContainer = ({
   title = '',
@@ -19,7 +19,7 @@ const ListContainer = ({
   itemSize = 24,
   itemSpacing = 5,
   type = '',
-  flexGrow = 1,
+  flexGrow = 1
 }) => {
   return (
     <ListContainerStyles
@@ -38,14 +38,14 @@ const ListContainer = ({
         />
       )}
     </ListContainerStyles>
-  )
-}
+  );
+};
 
 ListContainer.propTypes = {
   title: PropTypes.string,
   list: PropTypes.array,
   itemSize: PropTypes.number.isRequired,
   itemSpacing: PropTypes.number.isRequired,
-  flexGrow: PropTypes.number,
-}
-export default ListContainer
+  flexGrow: PropTypes.number
+};
+export default ListContainer;

@@ -1,7 +1,14 @@
 import React, { useRef, useContext, useEffect, useState } from 'react';
 import ListContext from './context/ListContext';
 import ListItemStyles from './styles/ListItemStyles';
-const ListItem = ({ index, title = '', altTitle='', icon, tags = [], size = 24 }) => {
+const ListItem = ({
+  index,
+  title = '',
+  altTitle = '',
+  icon,
+  tags = [],
+  size = 24
+}) => {
   const listItemRef = useRef(null);
   const {
     activeIndex,
@@ -54,7 +61,7 @@ const ListItem = ({ index, title = '', altTitle='', icon, tags = [], size = 24 }
         size={size}
       >
         <h2>{title}</h2>
-        {icon}
+        <div style={{ marginBottom: '2px', marginRight: '15px' }}>{icon}</div>
       </ListItemStyles>
     )
   );
