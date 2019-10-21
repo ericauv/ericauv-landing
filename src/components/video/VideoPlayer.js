@@ -17,6 +17,8 @@ const VideoPlayer = ({ src, setPlaying, vidRef }) => {
   return (
     <div className="video-player" style={{ height: '240px' }}>
       <VideoStyles
+        id={src}
+        preload="auto"
         onPause={onPause}
         onPlaying={onPlaying}
         ref={vidRef}

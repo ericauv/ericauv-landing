@@ -86,7 +86,7 @@ const CopyStyles = styled.div`
 
 const About = () => {
   return (
-    <AboutPageStyles autofocus filled={false}>
+    <AboutPageStyles filled={false}>
       <CopyStyles className="copy-container">
         <div className="copy">
           My name is Eric Auväärt. I develop{' '}

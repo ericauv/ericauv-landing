@@ -1,20 +1,21 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { Provider } from '../context/ListContext';
 import ListContainer from '../ListContainer';
 import VideoPlayer from './VideoPlayer';
-import violetPath from 'd247ubh8hfac6h.cloudfront.net/violet-vid.mp4';
-import minjuPath from 'd247ubh8hfac6h.cloudfront.net/minju-vid.mp4';
-import haneulPath from 'd247ubh8hfac6h.cloudfront.net/haneul-vid.mp4';
-import samGPath from 'd247ubh8hfac6h.cloudfront.net/sam-gellaitry-vid.mp4';
-import magicPath from 'd247ubh8hfac6h.cloudfront.net/magic-vid.mp4';
-import commeHatPath from 'd247ubh8hfac6h.cloudfront.net/hat-vid.mp4';
-import commeLaunchPath from 'd247ubh8hfac6h.cloudfront.net/launch-vid.mp4';
-import bahiaPath from 'd247ubh8hfac6h.cloudfront.net/bahia-dreamin-vid.mp4';
-import nilsPath from 'd247ubh8hfac6h.cloudfront.net/nils-frahm-vid.mp4';
-import goodbyePath from 'd247ubh8hfac6h.cloudfront.net/goodbye-vid.mp4';
-import mumbaiPath from 'd247ubh8hfac6h.cloudfront.net/str8-outta-mumbai-vid.mp4';
-import goodGuyPath from 'd247ubh8hfac6h.cloudfront.net/good-guy-vid.mp4';
+const cloudFrontDomain = 'http://d247ubh8hfac6h.cloudfront.net/';
+const violetPath = `${cloudFrontDomain}violet-vid.mp4`;
+const minjuPath = `${cloudFrontDomain}minju-vid.mp4`;
+const haneulPath = `${cloudFrontDomain}haneul-vid.mp4`;
+const samGPath = `${cloudFrontDomain}sam-gellaitry-vid.mp4`;
+const magicPath = `${cloudFrontDomain}magic-vid.mp4`;
+const commeHatPath = `${cloudFrontDomain}hat-vid.mp4`;
+const commeLaunchPath = `${cloudFrontDomain}launch-vid.mp4`;
+const bahiaPath = `${cloudFrontDomain}bahia-dreamin-vid.mp4`;
+const nilsPath = `${cloudFrontDomain}nils-frahm-vid.mp4`;
+const goodbyePath = `${cloudFrontDomain}goodbye-vid.mp4`;
+const mumbaiPath = `${cloudFrontDomain}str8-outta-mumbai-vid.mp4`;
+const goodGuyPath = `${cloudFrontDomain}good-guy-vid.mp4`;
 
 const listItems = [
   {
@@ -90,13 +91,18 @@ const Video = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [playing, setPlaying] = useState(false);
   const [vidRef] = useState(useRef(null));
+
+  useEffect(() => {
+    setPlaying(false);
+  }, [activeIndex]);
+
   const togglePlaying = playing => {
     if (!vidRef) return null;
-    if (!playing && vidRef) {
+    if (!playing && vidRef && vidRef.current) {
       setPlaying(true);
       vidRef.current.play();
     }
-    if (playing && vidRef) {
+    if (playing && vidRef && vidRef.current) {
       setPlaying(false);
       vidRef.current.pause();
     }
@@ -145,10 +151,10 @@ const Video = () => {
               justifyItems: 'center'
             }}
           >
-            <p>Selected works</p>
+            {/* <p>Selected works</p>
             <p>Click/Tap/Press enter on a title to play video.</p>
             <p>Press Space to play/pause</p>
-            <p>Hover/Select title to show video thumbnail.</p>
+            <p>Hover/Select title to show video thumbnail.</p> */}
           </div>
         )}
         <ListContainer
