@@ -15,18 +15,6 @@ import nilsPath from 'd247ubh8hfac6h.cloudfront.net/nils-frahm-vid.mp4';
 import goodbyePath from 'd247ubh8hfac6h.cloudfront.net/goodbye-vid.mp4';
 import mumbaiPath from 'd247ubh8hfac6h.cloudfront.net/str8-outta-mumbai-vid.mp4';
 import goodGuyPath from 'd247ubh8hfac6h.cloudfront.net/good-guy-vid.mp4';
-// import violetPath from '../../images/violet-vid.mp4';
-// import minjuPath from '../../images/minju-vid.mp4';
-// import haneulPath from '../../images/haneul-vid.mp4';
-// import samGPath from '../../images/sam-gellaitry-vid.mp4';
-// import magicPath from '../../images/magic-vid.mp4';
-// import commeHatPath from '../../images/hat-vid.mp4';
-// import commeLaunchPath from '../../images/launch-vid.mp4';
-// import bahiaPath from '../../images/bahia-dreamin-vid.mp4';
-// import nilsPath from '../../images/nils-frahm-vid.mp4';
-// import goodbyePath from '../../images/goodbye-vid.mp4';
-// import mumbaiPath from '../../images/str8-outta-mumbai-vid.mp4';
-// import goodGuyPath from '../../images/good-guy-vid.mp4';
 
 const listItems = [
   {
