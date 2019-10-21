@@ -70,6 +70,8 @@ const ProjectStyles = styled.div`
 `;
 
 const TagSection = styled.div`
+  margin-bottom: 40px;
+  display: -webkit-box -moz-box -ms-flexbox -webkit-flex;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -79,18 +81,21 @@ const Tag = styled.div`
   background: ${props => props.theme.lightGrey};
   box-shadow: ${props => props.theme.bsLarge};
   color: ${props => props.theme.black};
+  min-width: 50px;
+  min-height: 24px;
   margin-right: 10px;
   margin-bottom: 10px;
   font-size: 24px;
   font-weight: 900;
   @media only screen and (max-width: ${props => props.theme.maxWidthLarge}) {
     font-size: 16px;
+    min-height: 20px;
   }
   @media only screen and (max-width: ${props => props.theme.maxWidthSmall}) {
+    min-height: 18px;
     font-size: 14px;
   }
   border-radius: 5px;
-  width: fit-content;
   padding-left: 8px;
   padding-right: 8px;
 `;
@@ -139,7 +144,7 @@ const Project = ({ data }) => {
         (titleMediaType === 'img' ? (
           <img src={titleMedia && titleMedia.publicURL} alt={title}></img>
         ) : (
-          <video autoPlay loop title={title}>
+          <video autoPlay loop muted preload controls title={title}>
             <source src={titleMedia && titleMedia.publicURL} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -147,10 +152,7 @@ const Project = ({ data }) => {
       {tags && tags.length && (
         <TagSection className="tag-section">
           {tags.map((tag, index) => (
-            <Tag
-              className={`tag ${index === 0 ? 'tag-first' : ''}`}
-              key={`${title}-tag-${index}`}
-            >
+            <Tag className={`tag`} key={`${title}-tag-${index}`}>
               {tag}
             </Tag>
           ))}
