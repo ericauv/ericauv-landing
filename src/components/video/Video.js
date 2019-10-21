@@ -81,6 +81,7 @@ const listItems = [
 const VideoPageStyles = styled.div`
   height: 100%;
   width: 100%;
+  display: -webkit-box -moz-box -ms-flexbox -webkit-flex; /* OLD - iOS 6-, Safari 3.1-6 */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,7 +136,7 @@ const Video = () => {
         {!activeItem && !activeItem.video && (
           <div
             style={{
-              display: 'flex',
+              display: '-webkit-box -webkit-flex flex',
               width: '100%',
               height: '240px',
               fontFamily: 'Arial, Helvetica, sans-serif',

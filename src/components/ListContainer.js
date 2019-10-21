@@ -4,11 +4,15 @@ import PropTypes from 'prop-types';
 import ListTitle from './ListTitle';
 import List from './List';
 const ListContainerStyles = styled.div`
-  display: flex;
+  display: -webkit-box -moz-box -ms-flexbox -webkit-flex; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: flex; /* OLD - iOS 6-, Safari 3.1-6 */
   flex-direction: column;
   margin-top: ${props => props.itemSize / 2}px;
+  -webkit-flex-grow: ${props => props.flexGrow};
   flex-grow: ${props => props.flexGrow};
+  -webkit-flex-shrink: ${props => (props.flexGrow ? 1 / props.flexGrow : 1)};
   flex-shrink: ${props => (props.flexGrow ? 1 / props.flexGrow : 1)};
+  -webkit-flex-basis: auto;
   flex-basis: auto;
   width: 100%;
 `;

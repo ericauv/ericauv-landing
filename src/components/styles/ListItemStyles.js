@@ -3,8 +3,10 @@ import styled from 'styled-components';
 const ListItemStyles = styled.li`
   text-decoration: none;
   transition:padding-left ease 0.3s;
+  display: -webkit-box -moz-box -ms-flexbox -moz-flex -webkit-flex;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: flex;
   align-items: center;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
   width: 100%;
   cursor: pointer;

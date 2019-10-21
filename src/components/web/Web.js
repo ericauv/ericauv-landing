@@ -5,6 +5,7 @@ import ListContainer from '../ListContainer';
 import { navigate } from '@reach/router';
 
 const WebPageStyles = styled.div`
+  display: -webkit-box -moz-box -ms-flexbox -webkit-flex;
   display: flex;
   flex-direction: column;
   align-items: center;

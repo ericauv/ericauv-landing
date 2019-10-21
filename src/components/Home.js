@@ -18,6 +18,7 @@ const listItems = [
 ];
 
 const HomePageStyles = styled.div`
+  display: -webkit-box -moz-box -ms-flexbox -webkit-flex; /* OLD - iOS 6-, Safari 3.1-6 */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -29,7 +30,24 @@ const HomePageStyles = styled.div`
     overflow: hidden;
   }
 `;
-
+const HomeListContainerContainer = styled.div`
+  height: 80%;
+  display: -webkit-box -moz-box -ms-flexbox -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 70px;
+  margin-right: 10px;
+  /* Medium Screen */
+  @media only screen and (max-width: ${props => props.theme.maxWidthMedium}) {
+    height: 70%;
+  }
+  /* Small Screen */
+  @media only screen and (max-width: ${props => props.theme.maxWidthMedium}) {
+    height: 70%;
+    margin-bottom: 80px;
+  }
+`;
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [activeTags, setActiveTags] = useState([]);
@@ -53,17 +71,9 @@ const Home = () => {
   return (
     <HomeContext value={states}>
       <HomePageStyles>
-        <div
-          style={{
-            height: '60%',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            marginBottom: '50px'
-          }}
-        >
-          <ListContainer list={listItems} itemSize={72} itemSpacing={8} />
-        </div>
+        <HomeListContainerContainer className="home-list-container">
+          <ListContainer list={listItems} itemSize={72} itemSpacing={10} />
+        </HomeListContainerContainer>
       </HomePageStyles>
     </HomeContext>
   );

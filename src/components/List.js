@@ -8,47 +8,44 @@ const ListStyles = styled.ul`
   ::-webkit-scrollbar {
     width: 0px;
   }
-  margin-bottom:7px;
-  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  overflow-y: scroll;
+  display: -webkit-box -moz-box -ms-flexbox -webkit-flex; /* OLD - iOS 6-, Safari 3.1-6 */
   flex-direction: column;
+  -webkit-flex-grow: ${props => props.flexGrow};
   flex-grow: ${props => props.flexGrow};
+  -webkit-flex-shrink: ${props => (props.flexGrow ? 1 / props.flexGrow : 1)};
   flex-shrink: ${props => (props.flexGrow ? 1 / props.flexGrow : 1)};
-  flex-basis:${props => props.itemSpacing * 4 + props.itemSize * 4}px;
+  -webkit-flex-basis: ${props => props.itemSpacing * 4 + props.itemSize * 4}px;
+  flex-basis: ${props => props.itemSpacing * 4 + props.itemSize * 4}px;
   @media only screen and (max-width: ${props => props.theme.maxWidthMedium}) {
+    -webkit-flex-basis: ${props =>
+      Math.ceil(0.9 * (props.itemSpacing * 4 + props.itemSize * 4))}px;
     flex-basis: ${props =>
       Math.ceil(0.9 * (props.itemSpacing * 4 + props.itemSize * 4))}px;
   }
   @media only screen and (max-width: ${props => props.theme.maxWidthSmall}) {
+    -webkit-flex-basis: ${props =>
+      Math.ceil(0.75 * (props.itemSpacing * 4 + props.itemSize * 4))}px;
     flex-basis: ${props =>
       Math.ceil(0.75 * (props.itemSpacing * 4 + props.itemSize * 4))}px;
   }
-  padding: 0;
-  margin: 0;
-  padding-left: 10px;
-  overflow-y: scroll;
+
   li {
     padding: 0;
-    /* padding-top: ${props => Math.floor(props.itemSpacing / 2)}px; */
-    /* padding-bottom: ${props => Math.ceil(props.itemSpacing / 2)}px; */
     margin-top: ${props => Math.floor(props.itemSpacing / 2)}px;
     margin-bottom: ${props => Math.ceil(props.itemSpacing / 2)}px;
     /* Medium Screen */
     @media only screen and (max-width: ${props => props.theme.maxWidthMedium}) {
-      /* padding-top: ${props =>
-        Math.floor((0.9 * props.itemSpacing) / 2)}px; */
-      /* padding-bottom: ${props =>
-        Math.ceil((0.9 * props.itemSpacing) / 2)}px; */
       margin-top: ${props => Math.floor((0.9 * props.itemSpacing) / 2)}px;
       margin-bottom: ${props => Math.ceil((0.9 * props.itemSpacing) / 2)}px;
     }
     /* Small Screen */
     @media only screen and (max-width: ${props => props.theme.maxWidthSmall}) {
-      /* padding-top: ${props =>
-        Math.floor((0.75 * props.itemSpacing) / 2)}px; */
-      /* padding-bottom: ${props =>
-        Math.ceil((0.75 * props.itemSpacing) / 2)}px; */
-      maring-top: ${props => Math.floor((0.75 * props.itemSpacing) / 2)}px;
-      maring-bottom: ${props => Math.ceil((0.75 * props.itemSpacing) / 2)}px;
+      margin-top: ${props => Math.floor((0.75 * props.itemSpacing) / 2)}px;
+      margin-bottom: ${props => Math.ceil((0.75 * props.itemSpacing) / 2)}px;
     }
   }
 `;
@@ -56,7 +53,7 @@ const ListStyles = styled.ul`
 const List = ({ list, itemSize, itemSpacing, type, flexGrow }) => {
   return (
     <ListStyles
-      itemSize={itemSize + 6}
+      itemSize={itemSize}
       flexGrow={flexGrow}
       itemSpacing={itemSpacing}
       className="list"
