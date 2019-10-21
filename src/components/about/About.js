@@ -36,14 +36,17 @@ const AboutPageStyles = styled.div`
     color: transparent;
     -webkit-text-stroke: ${props => props.theme.textStroke};
     outline: none;
-    :hover {
-      color: ${props => props.theme.black};
-      -webkit-text-stroke: 0px;
-      text-decoration-line: underline;
+    @media (hover: hover) {
+      :hover {
+        color: ${props => props.theme.black};
+        -webkit-text-stroke: 0px;
+        text-decoration-line: underline;
+      }
     }
   }
 `;
 const CopyStyles = styled.div`
+  display: -webkit-box -ms-flexbox -webkit-flex;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,7 +86,7 @@ const CopyStyles = styled.div`
 
 const About = () => {
   return (
-    <AboutPageStyles filled={false}>
+    <AboutPageStyles autofocus filled={false}>
       <CopyStyles className="copy-container">
         <div className="copy">
           My name is Eric Auväärt. I develop{' '}
