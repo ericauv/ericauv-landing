@@ -33,7 +33,7 @@ const HeaderStyles = styled.h1`
 const Header = ({ filled = false, children }) => {
   const [active, setActive] = useState(false);
   return (
-    <Link to="/">
+    <Link to="/menu">
       <HeaderStyles
         onMouseOver={() => setActive(true)}
         onMouseLeave={() => setActive(false)}

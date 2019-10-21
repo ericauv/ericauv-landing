@@ -1,13 +1,13 @@
+import About from '../components/about/About'
 import React from 'react'
-import SEO from '../components/seo'
-import Home from '../components/Home'
 import Layout from '../components/styles/layout/Layout'
+import SEO from '../components/seo'
 
-const IndexPage = () => (
-  <Layout home contact filled={true}>
-    <SEO title="Home" />
-    <Home />
+const AboutPage = props => (
+  <Layout contact>
+    <SEO title="About" description='Brief bio about Eric Auvaart, with links to other social media' />
+    <About />
   </Layout>
 )
 
-export default IndexPage
+export default AboutPage

@@ -36,6 +36,7 @@ const Web = ({ projects }) => {
     if (activeTags[clickedTag]) {
       setActiveTags(activeTags => {
         delete activeTags[clickedTag];
+        setActiveIndexTag(null);
         setActiveTagChange(!activeTagChange);
         return activeTags;
       });

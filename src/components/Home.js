@@ -6,15 +6,15 @@ import icons from './Icons';
 import { navigate } from 'gatsby';
 
 const listItems = [
-  { title: 'web', icon: icons.code },
+  { title: 'web', icon: icons.code, link: 'web' },
   // { title: 'photo', icon: icons.image },
-  { title: 'video', icon: icons.video },
+  { title: 'video', icon: icons.video, link: 'video' },
   {
     title: 'store',
     icon: icons.cart,
     externalLink: 'https://store.ericauv.com'
   },
-  { title: 'about', icon: icons.user }
+  { title: 'about', icon: icons.user, link: '/' }
 ];
 
 const HomePageStyles = styled.div`
@@ -59,7 +59,7 @@ const Home = () => {
     onClickValue: listItems && listItems[activeIndex],
     onClickFunction: listItem => {
       if (!listItem.externalLink) {
-        navigate(`/${listItem.title}`);
+        navigate(`${listItem.link}`);
       } else {
         window.location.href = listItem.externalLink;
       }

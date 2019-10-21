@@ -10,7 +10,7 @@ const ListItemStyles = styled.li`
   justify-content: space-between;
   width: 100%;
   cursor: pointer;
-  outline: none;
+  outline:none;
   h2 {
     border-bottom:4px solid transparent;
     margin: 0;
@@ -40,7 +40,7 @@ const ListItemStyles = styled.li`
     }
   }
   &.list-item-active {
-    padding-left: 5px;
+    /* padding-left: 5px; */
     /* border-left: 5px so  lid ${props => props.theme.black}; */
 
     h2 {
