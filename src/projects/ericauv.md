@@ -1,6 +1,7 @@
 ---
 title: ericauv
 githubLink: https://github.com/ericauv/ericauv-landing
+projectLink: https://www.ericauv.com
 tags: [graphQL, react.js, gatsby.js, node.js]
 ---
 
@@ -49,7 +50,7 @@ tags: [graphQL, react.js, gatsby.js, node.js]
         <strong>Ensure responsiveness.</strong> I wanted to make sure that users
         of this site would have a great experience, no matter the medium used to
         access it. For this reason, I ensured that the size and layout of
-        components adapted perfectly to different screen sizes
+        components adapted perfectly to different screen sizes. In order to design for both mobile and desktop use, I accessed my development server on different browsers on desktop as well as on my mobile phone. It was crucial to view the site on my phone -- while Chrome's device view tool will mimic the screen size of mobile devices, it does not emulate them. I found and fixed many bugs that appeared while viewing the site on a mobile device.
       </li>
       <li>
         <strong>Maintain personal brand identity.</strong> I wanted to keep with
