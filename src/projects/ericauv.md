@@ -50,13 +50,27 @@ tags: [graphQL, react.js, gatsby.js, node.js]
         <strong>Ensure responsiveness.</strong> I wanted to make sure that users
         of this site would have a great experience, no matter the medium used to
         access it. For this reason, I ensured that the size and layout of
-        components adapted perfectly to different screen sizes. In order to design for both mobile and desktop use, I accessed my development server on different browsers on desktop as well as on my mobile phone. It was crucial to view the site on my phone -- while Chrome's device view tool will mimic the screen size of mobile devices, it does not emulate them. I found and fixed many bugs that appeared while viewing the site on a mobile device.
+        components adapted perfectly to different screen sizes.
       </li>
       <li>
         <strong>Maintain personal brand identity.</strong> I wanted to keep with
         the brand identity I've developed through the visual content I deliver
         (primarily on instagram). This meant heavy use of no-fill stroke type,
         Arial Black, and repetition.
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="project-section">
+  <h3 class="project-section-title">achievements/lessons</h3>
+  <div class="project-section-content">
+  <p>I ran into a few roadblocks while developing the site and learnt some great lessons through overcoming them.</p>
+    <ul>
+      <li>
+        <strong>Host videos with S3 + Cloudfront</strong> Originally, I hosted the videos for this site myself, but found that they were provided to the client too slowly. I tried using vimeo to host the videos, however in order to customize the player I would need to sign up for a paid plan. Finally, I decided upon using an S3 bucket to host my videos and used Cloudflare to distribute them. The videos now load super fast and for the a great deal more than the amount of traffic I anticipate for this site, the hosting + distribution will be free.
+      </li>
+      <li>
+        <strong>Test on different devices.</strong>Originally, I (wrongly) assumed that Chrome's device view would be sufficient to ensure that the site design would work on different devices. However, I quickly found out after seeing the site on mobile that this was not the case. In order to design for both mobile and desktop use, I accessed my development server on different browsers on desktop as well as on my mobile phone. It was crucial to view the site on my phone -- while Chrome's device view tool will mimic the screen size of mobile devices, it does not emulate the devices themseleves. I found and fixed many bugs that appeared while viewing the site on a mobile device.
       </li>
     </ul>
   </div>
@@ -88,7 +102,7 @@ tags: [graphQL, react.js, gatsby.js, node.js]
         achievement progress (ex: 3/14 achievements completed) in localStorage.
       </li>
       <li>
-        <strong>Persist dark mode.</strong> Ideally, when a user navigates between store.ericauv.com and ericauv.com or revisits one of those sites after closing their browser, they're dark mode preference should stay the same. I would implement this by saving the dark mode/light mode selection in local storage, and setting the dark/light theme by looking at the value of this item in localStorage.
+        <strong>Persist dark mode between sites.</strong> Ideally, when a user navigates between store.ericauv.com and ericauv.com or revisits one of those sites after closing their browser, they're dark mode preference should stay the same. I would implement this by saving the dark mode/light mode selection in local storage, and setting the dark/light theme by looking at the value of this item in localStorage.
       </li>
     </ul>
   </div>
