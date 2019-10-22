@@ -9,17 +9,13 @@ tags: [graphQL, react.js, gatsby.js, node.js]
   <h3 class="project-section-title">summary</h3>
   <div class="project-section-content">
     <p>
-      A portfolio site to showcase web development projects, frontend skills,
-      and video projects.
+      A showcase of web development projects, frontend skills, and video projects.
     </p>
   </div>
 </div>
 <div class="project-section">
   <h3 class="project-section-title">objectives</h3>
   <div class="project-section-content">
-    <p>
-      I had a few guiding principles for the design of this site:
-    </p>
     <ul>
       <li>
         <strong>Get hired.</strong> One of the main objectives of this site is
@@ -64,10 +60,10 @@ tags: [graphQL, react.js, gatsby.js, node.js]
 <div class="project-section">
   <h3 class="project-section-title">achievements/lessons</h3>
   <div class="project-section-content">
-  <p>I ran into a few roadblocks while developing the site and learnt some great lessons through overcoming them.</p>
+  <p>I ran into a few roadblocks while developing the site and learned some great lessons through overcoming them.</p>
     <ul>
       <li>
-        <strong>Host videos with S3 + Cloudfront</strong> Originally, I hosted the videos for this site myself, but found that they were provided to the client too slowly. I tried using vimeo to host the videos, however in order to customize the player I would need to sign up for a paid plan. Finally, I decided upon using an S3 bucket to host my videos and used Cloudflare to distribute them. The videos now load super fast and for the a great deal more than the amount of traffic I anticipate for this site, the hosting + distribution will be free.
+        <strong>Host videos with S3 + Cloudfront</strong> Originally, I hosted the videos for this site on the same server as the site, but found that the videos loaded too slowly. I tried using vimeo to host the videos, however in order to customize the player I would need to sign up for a paid plan. Finally, I decided upon using an S3 bucket to host my videos and used Cloudfront to distribute them. The videos now load super fast and for the a great deal more than the amount of traffic I anticipate for this site, the hosting + distribution will be free.
       </li>
       <li>
         <strong>Test on different devices.</strong>Originally, I (wrongly) assumed that Chrome's device view would be sufficient to ensure that the site design would work on different devices. However, I quickly found out after seeing the site on mobile that this was not the case. In order to design for both mobile and desktop use, I accessed my development server on different browsers on desktop as well as on my mobile phone. It was crucial to view the site on my phone -- while Chrome's device view tool will mimic the screen size of mobile devices, it does not emulate the devices themseleves. I found and fixed many bugs that appeared while viewing the site on a mobile device.
@@ -97,7 +93,7 @@ tags: [graphQL, react.js, gatsby.js, node.js]
         <strong>Add some fun!</strong> I want to add a bit of gameification to
         this site in the form of achievements. For example -- an achievement for
         reaching all the pages on the site, or one for downloading the pdf of my
-        resume. Someone visiting the site might then want to dive deeper to
+        resume -- maybe an achievement for you for reading all the way too this point :). Someone visiting the site might then want to dive deeper to
         fulfill all the achievements. I would likely implement this by storing
         achievement progress (ex: 3/14 achievements completed) in localStorage.
       </li>
