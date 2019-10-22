@@ -1,5 +1,7 @@
 ---
 title: ericauv
+titleMedia: '../images/ericauv-videos.mp4'
+titleMediaType: 'video'
 githubLink: https://github.com/ericauv/ericauv-landing
 projectLink: https://www.ericauv.com
 tags: [graphQL, react.js, gatsby.js, node.js]
