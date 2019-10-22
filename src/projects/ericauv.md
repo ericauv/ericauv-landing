@@ -18,9 +18,7 @@ tags: [graphQL, react.js, gatsby.js, node.js]
   <div class="project-section-content">
     <ul>
       <li>
-        <strong>Get hired.</strong> One of the main objectives of this site is
-        for potential employers to see the thinking/reflection that goes into
-        the work that I do. In addition to this, I want to be easily
+        <strong>Get hired.</strong> I want to show potential employers the thinking process and reflection that goes into my development and design. In addition to this, I want to be easily
         contactable. For these reasons, I've included a write-up on selected web
         projects, as well as contact+resume links. If you're reading this and
         are hiring... LET'S CONNECT VIA <a href="mailto:e.auvaart">EMAIL</a>, or
@@ -35,24 +33,15 @@ tags: [graphQL, react.js, gatsby.js, node.js]
       <li>
         <strong>Ensure accessibility.</strong> When building any component, I
         wanted to ensure that it could be intuitively interacted with using only
-        keyboard input. This meant making sure list items were tabable (ensuring
-        styles were applied on focus and not just on hover), ensuring that
-        actions like filtering web projects or controlling videos could be done
-        only using the keyboard, and allowing scrolling through content without
-        a scrollwheel. In addition, I wanted to make sure that users who want to
-        use dark mode have the option to do so.
+        keyboard input. List items are tab-able, and styles are applied on focus as well as on hover. Additionally, actions like filtering web porjects or controlling videos can be done by using only the keyboard, and scrolling content does not require a scroll-wheel. Finally, I made it easy to use the dark mode option.
       </li>
       <li>
         <strong>Ensure responsiveness.</strong> I wanted to make sure that users
         of this site would have a great experience, no matter the medium used to
-        access it. For this reason, I ensured that the size and layout of
-        components adapted perfectly to different screen sizes.
+        access it. The size and layout of components adapt perfectly to different screen sizes.
       </li>
       <li>
-        <strong>Maintain personal brand identity.</strong> I wanted to keep with
-        the brand identity I've developed through the visual content I deliver
-        (primarily on instagram). This meant heavy use of no-fill stroke type,
-        Arial Black, and repetition.
+        <strong>Maintain personal brand identity.</strong> The visual content is consistent with my other media (e.g. Instagram), with a heavy use of no-fill stroke type, sans-serif typefaces, and repetition.
       </li>
     </ul>
   </div>
@@ -66,7 +55,7 @@ tags: [graphQL, react.js, gatsby.js, node.js]
         <strong>Host videos with S3 + Cloudfront</strong> Originally, I hosted the videos for this site on the same server as the site, but found that the videos loaded too slowly. I tried using vimeo to host the videos, however in order to customize the player I would need to sign up for a paid plan. Finally, I decided upon using an S3 bucket to host my videos and used Cloudfront to distribute them. The videos now load super fast and for the a great deal more than the amount of traffic I anticipate for this site, the hosting + distribution will be free.
       </li>
       <li>
-        <strong>Test on different devices.</strong>Originally, I (wrongly) assumed that Chrome's device view would be sufficient to ensure that the site design would work on different devices. However, I quickly found out after seeing the site on mobile that this was not the case. In order to design for both mobile and desktop use, I accessed my development server on different browsers on desktop as well as on my mobile phone. It was crucial to view the site on my phone -- while Chrome's device view tool will mimic the screen size of mobile devices, it does not emulate the devices themseleves. I found and fixed many bugs that appeared while viewing the site on a mobile device.
+        <strong>Test on different devices.</strong>I realized that using Chrome's "device view" does not ensure that the site will work as designed on different devices. In order to design for both mobile and desktop use, I accessed my development server on different browsers on desktop as well as on my mobile phone. It was crucial actually test the site on my phone because even though Chrome's "device view" tool will mimic the screen size of mobile devices, it does not emulate the devices themseleves. Many bugs were found and fixed by viewing the site on a mobile device.
       </li>
     </ul>
   </div>
@@ -80,19 +69,14 @@ tags: [graphQL, react.js, gatsby.js, node.js]
     </p>
     <ul>
       <li>
-        <strong>Layout for large screens.</strong> I feel that the centered
-        layout on the homepage is a bit bland on larger screens and want to make
-        a layout where the 'ericauv' header is on the left of the screen and
-        rotated 90'. I see a lot of potential for changing the layout on larger
-        screens for the other pages as well (e.g. show web project videos on
-        hover -- similar to how video page is implemented). I'm a huge fan of
-        editorial design so I'm quite excited to tackle this when I have some
-        time.
+        <strong>Layout for large screens.</strong> The centered layout of the menu page seems bland on larger screens. I want to make a layout where the 'ericauv' header is on the left and
+        rotated 90'. Potential changes for the other pages include showing web project videos on hover, similar to how the video page is implemented. I'm a huge fan of
+        editorial design so I'm quite excited to tackle this soon.
       </li>
       <li>
-        <strong>Add some fun!</strong> I want to add a bit of gameification to
-        this site in the form of achievements. For example -- an achievement for
-        reaching all the pages on the site, or one for downloading the pdf of my
+        <strong>Add some fun!</strong> I want to add a bit of "gameification" to
+        the site in the form of achievements. For example -- an achievement for
+        reaching all the pages on the site, or an achievement for downloading the pdf of my
         resume -- maybe an achievement for you for reading all the way too this point :). Someone visiting the site might then want to dive deeper to
         fulfill all the achievements. I would likely implement this by storing
         achievement progress (ex: 3/14 achievements completed) in localStorage.
