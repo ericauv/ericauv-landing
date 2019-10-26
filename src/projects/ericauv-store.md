@@ -32,11 +32,7 @@ projectLink: https://store.ericauv.com
         from the backend server is blocked by their browsers by default. This is
         due to the fact that the backend is deployed to a different domain than
         the frontend so the browser is treating the cookie as a 'third-party'
-        cookie. Therefore, I must determine how to implement local storage to
-        store JWT token. An additional challenge to this is that the app is
-        Server Side Rendered (SSR) using Next.js so I am unable to access the
-        local storage since that exists on the client and not the server. I am
-        looking into storing the token in the Apollo Client store.
+        cookie. <strong>SOLVED!</strong> I solved this problem by creating a subdomain for my backend within the ericauv.com domain. I accomplished this by creating a CNAME record in my DNS records for ericauv.com. This record pointed to the Heroku deployment for my backend server.
       </li>
       <li>
         <strong>Allow "Guest" Checkout.</strong> Allow cart access without
