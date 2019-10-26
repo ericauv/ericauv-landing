@@ -27,14 +27,6 @@ projectLink: https://store.ericauv.com
     </p>
     <ul>
       <li>
-        <strong>Fix sign in on mobile.</strong> Currently, mobile users are
-        unable to sign in because the cookie containing the JWT token returned
-        from the backend server is blocked by their browsers by default. This is
-        due to the fact that the backend is deployed to a different domain than
-        the frontend so the browser is treating the cookie as a 'third-party'
-        cookie. <strong>SOLVED!</strong> I solved this problem by creating a subdomain for my backend within the ericauv.com domain. I accomplished this by creating a CNAME record in my DNS records for ericauv.com. This record pointed to the Heroku deployment for my backend server.
-      </li>
-      <li>
         <strong>Allow "Guest" Checkout.</strong> Allow cart access without
         requiring sign up. This will likely be done by storing the cart in local
         storage. In order to checkout, the cart will be sent to the backend to
@@ -84,6 +76,14 @@ projectLink: https://store.ericauv.com
       <li>
         <strong>Improve Footer.</strong> Add a site map to the footer, and style
         the footer, at the moment it looks a footer from 1999.
+      </li>
+      <li>
+        <strong>Fix sign in on mobile.</strong> Currently, mobile users are
+        unable to sign in because the cookie containing the JWT token returned
+        from the backend server is blocked by their browsers by default. This is
+        due to the fact that the backend is deployed to a different domain than
+        the frontend so the browser is treating the cookie as a 'third-party'
+        cookie. <strong>SOLVED!</strong> I solved this problem by creating a subdomain for my backend within the ericauv.com domain. I accomplished this by creating a CNAME record in my DNS records for ericauv.com. This record pointed to the Heroku deployment for my backend server.
       </li>
     </ul>
   </div>
