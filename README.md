@@ -1,4 +1,4 @@
-# ericauv.com
+# [ericauv.com](https://ericauv.com)
 
 A portfolio site built with Gatsby.js showcasing web development projects, and video projects.
 
