@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Provider } from '../context/ListContext';
 import ListContainer from '../ListContainer';
 import VideoPlayer from './VideoPlayer';
-const cloudFrontDomain = 'http://d247ubh8hfac6h.cloudfront.net/';
+const cloudFrontDomain = 'https://d247ubh8hfac6h.cloudfront.net/';
 const violetPath = `${cloudFrontDomain}violet-vid.mp4`;
 const minjuPath = `${cloudFrontDomain}minju-vid.mp4`;
 const haneulPath = `${cloudFrontDomain}haneul-vid.mp4`;
