@@ -36,6 +36,7 @@ const Header = ({ filled = false, children }) => {
     <Link to="/menu">
       <HeaderStyles
         onMouseOver={() => setActive(true)}
+        onFocus={() => setActive(true)}
         onMouseLeave={() => setActive(false)}
         filled={filled || active}
         className="header"

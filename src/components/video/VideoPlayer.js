@@ -37,6 +37,14 @@ const VideoPlayer = ({ src, setPlaying, vidRef }) => {
             vidRef.current.setAttribute('controlsList', 'nodownload');
           }
         }}
+        onFocus={e => {
+          if (vidRef.current.hasAttribute('controls')) {
+            return null;
+          } else {
+            vidRef.current.setAttribute('controls', true);
+            vidRef.current.setAttribute('controlsList', 'nodownload');
+          }
+        }}
       >
         <source src={src} type="video/mp4" />
         Your browser does not support the video tag.

@@ -46,9 +46,13 @@ export default styled.button.attrs(props => ({
     height: ${props => props.size}rem;
     width: ${props => props.size}rem;
   }
-  :hover {
+  :focus{
+    outline: -webkit-focus-ring-color auto 3px;
+  }
+  :hover  {
     transform: rotate(${props => (props.rotate ? 90 : 0)}deg)
       scale(${props => (props.scale ? props.scale : 1)});
     box-shadow: ${props => props.theme.bs};
+    outline:none;
   }
 `;
