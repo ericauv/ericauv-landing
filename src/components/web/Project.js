@@ -78,6 +78,9 @@ const TagSection = styled.div`
 `;
 
 const Tag = styled.div`
+  display:flex;
+  justify-content:center;
+  height:100%;
   background: ${props => props.theme.lightGrey};
   box-shadow: ${props => props.theme.bsLarge};
   color: ${props => props.theme.black};
