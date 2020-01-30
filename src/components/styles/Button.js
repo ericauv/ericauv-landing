@@ -18,7 +18,7 @@ export default styled.button.attrs(props => ({
   height: ${props => props.size + 1}rem;
   line-height: ${props => props.size + 1}rem;
   @media only screen and (max-width: ${props => props.theme.maxWidthSmall}) {
-    font-size: ${props => props.size * 0.7}rem;
+    font-size: ${props => props.size * 0.65}rem;
     height: ${props => props.size * 1.3}rem;
     line-height: ${props => props.size * 1.3}rem;
     padding-left: 0.7rem;
