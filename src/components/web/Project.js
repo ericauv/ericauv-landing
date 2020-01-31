@@ -14,6 +14,7 @@ const ProjectStyles = styled.div`
   overflow-y: scroll;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 10px;
+  padding-bottom:200px;
   ::-webkit-scrollbar {
     width: 0px;
   }
@@ -66,7 +67,6 @@ const ProjectStyles = styled.div`
     }
     line-height: 2rem;
     font-family: 'Georgia';
-
   }
 `;
 
