@@ -10,7 +10,7 @@ const ContactBarStyles = styled.div`
   );
   position: absolute;
   width: 100%;
-  bottom: 5px;
+  bottom: 0px;
   background: ${props => props.theme.white};
   display: flex;
   align-self: center;
