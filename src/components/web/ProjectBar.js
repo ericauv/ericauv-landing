@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { github } from '../Icons';
 import { view } from '../Icons';
-const ContactBarStyles = styled.div`
+const ProjectBarStyles = styled.div`
   box-shadow: ${props => props.theme.bsUp};
   transition: transform 0.5s ease;
   transform: translateY(
@@ -48,11 +48,11 @@ const ContactBarStyles = styled.div`
   }
 `;
 
-const ContactBar = ({ githubLink, projectLink, shouldTranslateBar }) => {
+const ProjectBar = ({ githubLink, projectLink, shouldTranslateBar }) => {
   const barRef = useRef();
   const translate = shouldTranslateBar ? barRef.current.clientHeight : 0;
   return (
-    <ContactBarStyles ref={barRef} translate={translate}>
+    <ProjectBarStyles ref={barRef} translate={translate}>
       {githubLink && (
         <a
           title="github"
@@ -74,8 +74,8 @@ const ContactBar = ({ githubLink, projectLink, shouldTranslateBar }) => {
           {view}
         </a>
       )}
-    </ContactBarStyles>
+    </ProjectBarStyles>
   );
 };
 
-export default ContactBar;
+export default ProjectBar;
