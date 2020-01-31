@@ -38,6 +38,8 @@ projectLink: https://store.ericauv.com
         and a <em>'fidelity slider.'</em> I was introduced to the concept of a
         fidelity slider from Kyle Simpson's (
         <a
+        title="Kyle Simpson's Twitter"
+        tabindex="0"
           href="https://twitter.com/getify"
           rel="noopener noreferrer"
           target="_blank"
@@ -49,6 +51,8 @@ projectLink: https://store.ericauv.com
         should give them the power to access a lower fidelity version of your
         site. Gmail already does something similar to this with their
         <a
+        title="Gmail html only mode documentation"
+        tabindex="0"
           href="https://support.google.com/mail/answer/15049?hl=en"
           rel="noopener noreferrer"
           target="_blank"

@@ -1,6 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import ProjectBar from './ProjectBar';
+import StaticProjectBar from './StaticProjectBar'
 const ProjectStyles = styled.div`
   outline: none;
   align-self: center;
@@ -66,6 +66,7 @@ const ProjectStyles = styled.div`
     }
     line-height: 2rem;
     font-family: 'Georgia';
+
   }
 `;
 
@@ -105,18 +106,6 @@ const Tag = styled.div`
 `;
 
 const Project = ({ data }) => {
-  const projectRef = useRef();
-  useEffect(() => {
-    projectRef.current.focus();
-    projectRef.current.addEventListener('scroll', () => {});
-    const currentRef = projectRef.current;
-    // returned function will be called on component unmount
-    return () => {
-      currentRef.removeEventListener('scroll', () => {});
-    };
-  }, []);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [shouldTranslateBar, setShouldTranslateBar] = useState(false);
   const {
     title,
     tags,
@@ -125,22 +114,8 @@ const Project = ({ data }) => {
     titleMediaType,
     titleMedia
   } = data.frontmatter;
-  const handleScroll = () => {
-    const currentScrollY = projectRef.current.scrollTop;
-    projectRef.current.focus();
-    if (currentScrollY > lastScrollY) {
-      setShouldTranslateBar(true);
-    } else {
-      setShouldTranslateBar(false);
-    }
-    setLastScrollY(currentScrollY);
-  };
   return (
     <ProjectStyles
-autofocus
-      tabIndex={0}
-      onScroll={handleScroll}
-      ref={projectRef}
       className="project"
     >
       <h2>{title}</h2>
@@ -148,7 +123,7 @@ autofocus
         (titleMediaType === 'img' ? (
           <img src={titleMedia && titleMedia.publicURL} alt={title}></img>
         ) : (
-          <video autoPlay loop muted preload controls title={title}>
+          <video autoPlay loop muted preload="true" controls title={title}>
             <source src={titleMedia && titleMedia.publicURL} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -162,17 +137,11 @@ autofocus
           ))}
         </TagSection>
       )}
+      {( githubLink || projectLink) && <StaticProjectBar githubLink={githubLink} projectLink={projectLink}/>}
       <div
         className="project-content"
         dangerouslySetInnerHTML={{ __html: data.html }}
       ></div>
-      {(projectLink || githubLink) && (
-        <ProjectBar
-          shouldTranslateBar={shouldTranslateBar}
-          githubLink={githubLink}
-          projectLink={projectLink}
-        />
-      )}
     </ProjectStyles>
   );
 };

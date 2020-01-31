@@ -23,9 +23,12 @@ tags: [graphQL, react.js, gatsby.js, node.js]
         <strong>Get hired.</strong> I want to show potential employers the thinking process and reflection that goes into my development and design. In addition to this, I want to be easily
         contactable. For these reasons, I've included a write-up on selected web
         projects, as well as contact+resume links. If you're reading this and
-        are hiring... LET'S CONNECT VIA <a href="mailto:e.auvaart">EMAIL</a>, or
+        are hiring... LET'S CONNECT VIA <a
+        title="Email Me"
+        tabindex="0" href="mailto:e.auvaart">EMAIL</a>, or
         <a
-          title="linked in"
+        tabindex="0"
+          title="Linked In"
           rel="noopener noreferrer"
           target="_blank"
           href="https://linkedin.com/in/eric-auvaart/"

@@ -32,7 +32,9 @@ titleMedia: ../images/student-profiles.mp4
   <div class="project-section-content">
     <ul>
       <li>My implementation met all requirements, including the bonus requirement</li>
-      <li>I made sure to use the same fonts as those used in the video by screenshotting the video to match the font using <a href='https://www.fontsquirrel.com/matcherator' rel='noopener noreferrer' target='_blank'>Font Squirrel</a></li>
+      <li>I made sure to use the same fonts as those used in the video by screenshotting the video to match the font using <a
+      title="Font Squirrel"
+      tabindex="0" href='https://www.fontsquirrel.com/matcherator' rel='noopener noreferrer' target='_blank'>Font Squirrel</a></li>
       <li>I completed the task within 24 hours of receiving the requirements</li>
       <li>I learnt and implemented React.Context in order to avoid prop-drilling</li>
     </ul>

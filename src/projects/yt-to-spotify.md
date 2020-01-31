@@ -68,6 +68,7 @@ githubLink: https://github.com/ericauv/yt2Spotify
         this project was that the titles of youtube videos often include things
         like [OFFICIAL VIDEO], or (audio),
         <a
+        tabindex="0"
           href="http://tinyurl.com/yxgocub8"
           title="Regex visualization"
           target="_blank"
@@ -101,6 +102,7 @@ githubLink: https://github.com/ericauv/yt2Spotify
         and useQuery (Apollo)
       </li>
     </ul>
+
   </div>
 </div>
 <div class="project-section">
@@ -117,8 +119,9 @@ githubLink: https://github.com/ericauv/yt2Spotify
         between the client and the server. Somewhere in our exhaustion during
         the hackathon I crafted
         <a
+        tabindex="0"
           href="https://stackoverflow.com/questions/58151433/send-1-request-receive-2-responses-graphql"
-          title="Send 1 request, Receive 2 Responses GraphQL"
+          title="Send 1 request, Receive 2 Responses GraphQL StackOverflow question"
           rel="noopener noreferrer"
           target="_blank"
           >this beauty of a stackoverflow question who's title sounds like some
