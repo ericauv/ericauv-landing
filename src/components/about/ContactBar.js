@@ -50,15 +50,18 @@ const ContactBar = () => {
   return (
     <ContactBarStyles>
       <a
-        title="linked in"
+        title="View LinkedIn Profile"
         rel="noopener noreferrer"
         target="_blank"
         href="https://linkedin.com/in/eric-auvaart/"
       >
         {linkedin}
       </a>
+      <a title="View Resume/CV" href={resumePDF}>
+        {pdf}
+      </a>
       <a
-        title="github"
+        title="View Github Profile"
         rel="noopener noreferrer"
         target="_blank"
         href="https://github.com/ericauv"
@@ -66,7 +69,7 @@ const ContactBar = () => {
         {github}
       </a>
       <a
-        title="email"
+        title="Send Eric Auvaart an Email"
         rel="noopener noreferrer"
         target="_blank"
         href="mailto:e.auvaart@gmail.com"
@@ -74,15 +77,12 @@ const ContactBar = () => {
         {email}
       </a>
       <a
-        title="instagram"
+        title="View Instagram Profile"
         rel="noopener noreferrer"
         target="_blank"
         href="https://www.instagram.com/ericauv/"
       >
         {instagram}
-      </a>
-      <a title="resume" href={resumePDF}>
-        {pdf}
       </a>
     </ContactBarStyles>
   );
