@@ -68,7 +68,7 @@ const Web = ({ projects }) => {
         <ListContainer
           type="tag"
           key="tags-list"
-          title="web"
+          title="skills"
           list={tags}
           itemSize={itemSize}
           itemSpacing={10}
@@ -76,7 +76,7 @@ const Web = ({ projects }) => {
         />
         <ListContainer
           key="work-list"
-          title="work"
+          title="projects"
           list={projects}
           itemSize={itemSize}
           itemSpacing={10}
