@@ -14,6 +14,13 @@ const ContactBarStyles = styled.div`
   justify-content: center;
   margin-top: 20px;
   a {
+    span{ // for screen-readers
+      display:none;
+    }
+    font-size:0.8rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     cursor: pointer;
     margin-right: 20px;
     &:focus{
@@ -56,9 +63,15 @@ const ContactBar = () => {
         href="https://linkedin.com/in/eric-auvaart/"
       >
         {linkedin}
+        <span>
+          LinkedIn  
+        </span>
       </a>
       <a title="View Resume/CV" href={resumePDF}>
         {pdf}
+        <span>
+          Resume/CV      
+        </span>
       </a>
       <a
         title="View Github Profile"
@@ -67,6 +80,9 @@ const ContactBar = () => {
         href="https://github.com/ericauv"
       >
         {github}
+        <span>
+          GitHub
+        </span>
       </a>
       <a
         title="Send Eric Auvaart an Email"
@@ -75,6 +91,10 @@ const ContactBar = () => {
         href="mailto:e.auvaart@gmail.com"
       >
         {email}
+        <span>
+          Email      
+        </span>
+
       </a>
       <a
         title="View Instagram Profile"
@@ -83,6 +103,9 @@ const ContactBar = () => {
         href="https://www.instagram.com/ericauv/"
       >
         {instagram}
+        <span>
+          Instagram      
+        </span>
       </a>
     </ContactBarStyles>
   );
