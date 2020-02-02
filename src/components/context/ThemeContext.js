@@ -20,6 +20,7 @@ const themes = {
     white: '#FFFFFF',
     lightGrey: '#C1C1C1',
     textStroke: '1.2px #000000',
+    textStrokeInverted: '1px #FFFFFF',
     ...baseTheme
   },
   dark: {
@@ -28,6 +29,7 @@ const themes = {
     black: '#FFFFFF',
     lightGrey: '#696969',
     textStroke: '1px #FFFFFF',
+    textStrokeInverted: '1.2px #000000',
     ...baseTheme
   }
 };

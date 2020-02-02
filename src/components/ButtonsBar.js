@@ -7,9 +7,8 @@ import BackButton from './styles/BackButton'
 const ButtonsBarStyles = styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
-  width: 80%;
+  width: 100%;
   margin-top: 15px;
-  margin-bottom: 10px;
   @media only screen and (max-width: ${props => props.theme.maxWidthMedium}) {
     width: 95%;
     grid-template-columns: repeat(3, minmax(75px, 1fr));

@@ -4,7 +4,7 @@ import ThemeContext from '../../context/ThemeContext';
 import ButtonsBar from '../../ButtonsBar';
 import Header from './Header';
 import ContactBar from '../../about/ContactBar';
-
+import Nav from '../../nav/Nav'
 const PageStyles = styled.div`
   position: absolute;
   display: flex;
@@ -16,6 +16,14 @@ const PageStyles = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   background: ${props => props.theme.white};
   color: ${props => props.theme.black};
+`;
+
+const HeaderStyles = styled.header`
+  width:80%;
+  @media only screen and (max-width: ${props => props.theme.maxWidthMedium}) {
+    width: 95%;
+  }
+
 `;
 
 const PageBody = styled.div`
@@ -46,9 +54,11 @@ const Layout = ({
     <ThemeProvider theme={selectedTheme}>
       <PageStyles className="page-landing">
         <>
-        <ButtonsBar home={home}/>
-
+        <HeaderStyles>
+          <ButtonsBar home={home}/>
           <Header filled={filled}></Header>
+          <Nav/>
+        </HeaderStyles>
           <PageBody className="page-landing-body">{children}</PageBody>
         </>
         {contact && <ContactBar />}
