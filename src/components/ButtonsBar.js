@@ -16,12 +16,12 @@ const ButtonsBarStyles = styled.div`
 `;
 
 
-const ButtonsBar = ({home=false}) => {
+const ButtonsBar = ({noBackButton=false}) => {
     const { selectedTheme, toggleTheme } = useContext(ThemeContext);
 
     return (
-        <ButtonsBarStyles className='buttons-bar' home={home}>
-        {!home && <BackButton style={{ marginRight: 'auto' }} />}
+        <ButtonsBarStyles className='buttons-bar' noBackButton={noBackButton}>
+        {!noBackButton && <BackButton style={{ marginRight: 'auto' }} />}
             <Button
             onClick={toggleTheme}
             style={{ marginRight: 'auto', marginLeft: 'auto', gridColumn: 2 }}

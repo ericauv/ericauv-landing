@@ -44,7 +44,7 @@ const PageBody = styled.div`
 
 const Layout = ({
   filled = false,
-  home = false,
+  noBackButton = false,
   contact = false,
   children
 }) => {
@@ -55,7 +55,7 @@ const Layout = ({
       <PageStyles className="page-landing">
         <>
         <HeaderStyles>
-          <ButtonsBar home={home}/>
+          <ButtonsBar noBackButton={noBackButton}/>
           <Header filled={filled}></Header>
           <Nav/>
         </HeaderStyles>

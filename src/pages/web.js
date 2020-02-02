@@ -18,7 +18,7 @@ const WebPage = ({
   }
 }) => {
   return (
-    <Layout>
+    <Layout noBackButton={true}>
       <Web projects={nodesReducer(nodes)} />
     </Layout>
   );

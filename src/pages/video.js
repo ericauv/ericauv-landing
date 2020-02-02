@@ -4,7 +4,7 @@ import Layout from '../components/styles/layout/Layout'
 import SEO from '../components/seo'
 
 const VideoPage = props => (
-  <Layout>
+  <Layout noBackButton={true}>
     <SEO title="Video" description="Showcase of Eric Auvaart's video, motion design, and motion graphics work" />
     <Video />
   </Layout>

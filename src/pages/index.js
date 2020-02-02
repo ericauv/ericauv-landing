@@ -4,7 +4,7 @@ import Layout from '../components/styles/layout/Layout'
 import SEO from '../components/seo'
 
 const AboutPage = props => (
-  <Layout contact>
+  <Layout noBackButton={true} contact>
     <SEO title="About" description='Brief bio about Eric Auvaart, with links to other social media' />
     <About />
   </Layout>
