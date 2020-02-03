@@ -4,7 +4,9 @@ import {github, view} from '../Icons'
 
 
 const StaticProjectBarStyles = styled.div`
-    margin-top:5px;
+    margin-top:10px;
+    margin-bottom:10px;
+    min-height:90px;
     height:auto;
     width:100%;
     display: flex;
@@ -19,6 +21,7 @@ const LinkStyles = styled.a`
     flex-direction:column;
     align-items:center;
     padding:10px;
+    padding-bottom:0;
     cursor: pointer;
     margin-right: 20px;
 

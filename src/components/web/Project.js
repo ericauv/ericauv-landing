@@ -71,6 +71,7 @@ const ProjectStyles = styled.div`
 `;
 
 const TagSection = styled.div`
+  min-height:50px;
   margin-bottom: auto;
   display: -webkit-box -moz-box -ms-flexbox -webkit-flex;
   display: flex;
