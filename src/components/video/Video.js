@@ -111,10 +111,12 @@ const Video = () => {
     activeIndex,
     setActiveIndex,
     onClickValue: playing,
-    onClickFunction: togglePlaying
+    onClickFunction: togglePlaying,
+    noChangeActiveOnHover: playing ? true : false
   };
   const VideoContext = Provider;
-  const activeItem = activeIndex !== null && listItems[activeIndex];
+  const activeItem = activeIndex !== null ? listItems[activeIndex] : listItems[0];
+  if(activeIndex === null) setActiveIndex(0);
   const itemSize = 36;
   return (
     <VideoContext value={states}>
@@ -129,7 +131,6 @@ const Video = () => {
           }
         }}
       >
-        {/* <ListTitle title="video" size={itemSize}>video</ListTitle> */}
         {activeItem && activeItem.video && (
           <VideoPlayer
             name="video-player"
