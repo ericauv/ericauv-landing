@@ -10,7 +10,7 @@ const ListStyles = styled.ul`
   }
   margin: 0;
   padding: 0;
-  padding-left: 10px;
+  padding-left: 30px;
   overflow-y: scroll;
   display: -webkit-box -moz-box -ms-flexbox -webkit-flex; /* OLD - iOS 6-, Safari 3.1-6 */
   flex-direction: column;
