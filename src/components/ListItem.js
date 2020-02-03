@@ -16,7 +16,8 @@ const ListItem = ({
     activeTagChange,
     activeTags,
     onClickValue,
-    onClickFunction
+    onClickFunction,
+    noChangeActiveOnHover,
   } = useContext(ListContext);
   const [visible, setVisible] = useState(true);
   useEffect(() => {
@@ -42,8 +43,10 @@ const ListItem = ({
         }}
         // onBlur={() => setActiveIndex(null)} // commented out because need to keep as active when video is clicked
         onMouseOver={() => {
-          setActiveIndex(index);
-          listItemRef.current.focus(); // set focus to the element when it is hovered
+          if(!noChangeActiveOnHover){
+            setActiveIndex(index);
+            listItemRef.current.focus(); // set focus to the element when it is hovered
+          }
         }}
         onClick={e => {
           e.stopPropagation();
