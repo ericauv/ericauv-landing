@@ -61,6 +61,9 @@ const ProjectStyles = styled.div`
   }
 
   div.project-content {
+    a{
+      color: ${props=>props.theme.linkColor};
+    }
     p {
       margin-top: 10px;
       margin-bottom: 10px;
