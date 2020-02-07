@@ -1,7 +1,9 @@
-import Web from '../components/web/Web';
 import React from 'react';
-import Layout from '../components/styles/layout/Layout';
 import { graphql } from 'gatsby';
+import Layout from '../components/styles/layout/Layout';
+import SEO from '../components/seo'
+import Web from '../components/web/Web';
+
 
 const nodesReducer = nodes => {
   return nodes.map(node => {
@@ -19,6 +21,7 @@ const WebPage = ({
 }) => {
   return (
     <Layout noBackButton={true}>
+      <SEO title="Web" description="Eric Auvaart's web skills and web development projects" />
       <Web projects={nodesReducer(nodes)} />
     </Layout>
   );
