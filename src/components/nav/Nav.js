@@ -17,17 +17,12 @@ const navItems = [
         title: 'video',
         to:'/video',
         isExternalLink:false,
-    },
-    {
-        title: 'store',
-        to: 'https://store.ericauv.com',
-        isExternalLink:true,
     }
 ]
 
 
 const NavBarStyles = styled.nav`
-    width:100%; 
+    width:100%;
 `;
 
 const NavList = styled.ul`

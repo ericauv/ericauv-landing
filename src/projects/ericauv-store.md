@@ -4,7 +4,6 @@ tags: [node.js, react.js, graphQL, apollo, next.js, RESTful]
 titleMediaType: video
 titleMedia: '../images/ericauv-store.mp4'
 githubLink: https://github.com/ericauv/ericauv-new
-projectLink: https://store.ericauv.com
 ---
 
 <div class="project-section">
@@ -13,7 +12,7 @@ projectLink: https://store.ericauv.com
     <p>
       A web store that allows users to purchase prints of photos I've taken. The
       site processes payments via integration with the Stripe API, and sends
-      order confirmation emails via integration with Mailgun.
+      order confirmation emails via integration with Mailgun. NOTE: I have taken down the store as of Feb 24, 2020.
     </p>
   </div>
 </div>
