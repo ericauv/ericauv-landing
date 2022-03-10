@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import resumePDF from '../../images/Auvaart-Eric_Web-Developer_Resume.pdf';
 import { github } from '../Icons';
 import { instagram } from '../Icons';
 import { linkedin } from '../Icons';
 import { email } from '../Icons';
-import { pdf } from '../Icons';
 const ContactBarStyles = styled.div`
   position:absolute;
   bottom:5px;
@@ -65,12 +63,6 @@ const ContactBar = () => {
         {linkedin}
         <span>
           LinkedIn  
-        </span>
-      </a>
-      <a title="View Resume/CV" href={resumePDF}>
-        {pdf}
-        <span>
-          Resume/CV      
         </span>
       </a>
       <a
